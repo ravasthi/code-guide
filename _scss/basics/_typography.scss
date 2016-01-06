@@ -1,0 +1,68 @@
+/*-----[ typography and fonts ]-------------------------------------------------
+*/
+/*----------[ typography ]------------------------------------------------------
+*/
+$body-text-family      : 'PT Sans', 'DejaVu Sans', 'Bitstream Vera Sans', Tahoma, sans-serif;
+$monospace-text-family : 'PT Mono', Menlo, 'Courier New', 'Lucida Console', monospace;
+
+$body-text-size                        : 20px;
+$body-text-line-height                 : 1.5em;
+
+$secondary-text-size                   : 16px;
+$secondary-text-line-height            : 1.5em;
+
+$small-text-size                       : 14px;
+$small-text-line-height                : 1.5em;
+
+$large-text-size                       : 1.25rem;
+$large-text-line-height                : 1.25em;
+
+$heading-text-size                     : 3rem;
+$heading-text-line-height              : 1.25em;
+
+$subheading-text-size                  : 2.5rem;
+$subheading-text-line-height           : 1.25em;
+
+$secondary-subheading-text-size        : 2rem;
+$secondary-subheading-text-line-height : 1.25em;
+
+/*----------[ icon fonts ]------------------------------------------------------
+*/
+@font-face {
+  font-family: 'fontello';
+  font-weight: normal;
+  font-style: normal;
+
+  src: url('font/fontello.eot#iefix') format('embedded-opentype'),
+  url('font/fontello.woff') format('woff'),
+  url('font/fontello.ttf') format('truetype'),
+  url('font/fontello.svg') format('svg');
+  src: url('font/fontello.eot');
+}
+
+[class^='icon-']:before,
+[class*=' icon-']:before {
+  display: inline-block;
+
+  margin-right: 0.2em;
+  width: 1em;
+
+  font-family: 'fontello';
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+
+  text-align: center;
+  text-decoration: inherit;
+  text-transform: none;
+
+  speak: none;
+}
+
+.icon-github-circled:before {
+  content: '\e800';
+}
+
+.icon-twitter:before {
+  content: '\e801';
+}

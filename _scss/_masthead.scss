@@ -1,0 +1,44 @@
+/*-----[ masthead ]-------------------------------------------------------------
+*/
+.masthead {
+  padding: 3rem 1rem;
+
+  color: $masthead-text-color;
+  background-color: $masthead-bg;
+
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0.25rem;
+
+    color: #fff;
+  }
+
+  .icon {
+    display: inline-block;
+
+    margin: 0 0.5rem;
+
+    font-size: 3rem;
+  }
+
+  @media (min-width: 38em) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.masthead-links {
+  font-size: 2rem;
+
+  a {
+    color: $masthead-link-color;
+
+    transition: all 0.15s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+      color: $masthead-link-active-color;
+    }
+  }
+}

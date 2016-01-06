@@ -1,0 +1,47 @@
+code,
+pre {
+  font-family: $monospace-text-family;
+  font-size: 95%;
+}
+
+code {
+  border-radius: 0.2rem;
+  padding: 2px 4px;
+
+  color: $code-color;
+  background-color: $code-bg;
+
+  font-size: 85%;
+}
+
+pre {
+  display: block;
+
+  margin: 0 0 1rem;
+
+  line-height: 1.4;
+
+  white-space: pre;
+  white-space: pre-wrap;
+
+  code {
+    border: 0;
+    padding: 0;
+
+    color: inherit;
+    background-color: transparent;
+  }
+}
+
+
+.highlight {
+  margin: 0;
+
+  pre {
+    margin-bottom: 0;
+  }
+
+  & + .highlight {
+    margin-top: 1rem;
+  }
+}
