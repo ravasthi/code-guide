@@ -13,4 +13,4 @@ gem 'guard-livereload'
 gem 'guard-pow'
 gem 'rack-jekyll'
 gem 'powder'
-
+gem 'thin'
