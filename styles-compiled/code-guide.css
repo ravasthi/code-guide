@@ -1,0 +1,821 @@
+/* line 5, /Users/ravasthi/.rvm/gems/ruby-2.2.4@code-guide/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, /Users/ravasthi/.rvm/gems/ruby-2.2.4@code-guide/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, /Users/ravasthi/.rvm/gems/ruby-2.2.4@code-guide/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, /Users/ravasthi/.rvm/gems/ruby-2.2.4@code-guide/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, /Users/ravasthi/.rvm/gems/ruby-2.2.4@code-guide/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, /Users/ravasthi/.rvm/gems/ruby-2.2.4@code-guide/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, /Users/ravasthi/.rvm/gems/ruby-2.2.4@code-guide/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, /Users/ravasthi/.rvm/gems/ruby-2.2.4@code-guide/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, /Users/ravasthi/.rvm/gems/ruby-2.2.4@code-guide/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*-----[ colors ]---------------------------------------------------------------
+*/
+/*----------[ palette ]---------------------------------------------------------
+*/
+/*----------[ semantic colors ]-------------------------------------------------
+*/
+/*-----[ typography and fonts ]-------------------------------------------------
+*/
+/*----------[ typography ]------------------------------------------------------
+*/
+/*----------[ icon fonts ]------------------------------------------------------
+*/
+@font-face {
+  font-family: 'fontello';
+  font-weight: normal;
+  font-style: normal;
+  src: url("/fonts/fontello.eot#iefix") format("embedded-opentype"), url("/fonts/fontello.woff") format("woff"), url("/fonts/fontello.ttf") format("truetype"), url("/fonts/fontello.svg") format("svg");
+  src: url("/fonts/fontello.eot");
+}
+/* line 43, /Users/ravasthi/code/code-guide/_scss/basics/_typography.scss */
+.icon:before {
+  display: inline-block;
+  margin-right: 0.2em;
+  width: 1em;
+  font-family: 'fontello';
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  text-align: center;
+  text-decoration: inherit;
+  text-transform: none;
+  speak: none;
+}
+
+/* line 61, /Users/ravasthi/code/code-guide/_scss/basics/_typography.scss */
+.icon-github-circled:before {
+  content: '\e800';
+}
+
+/* line 65, /Users/ravasthi/code/code-guide/_scss/basics/_typography.scss */
+.icon-twitter:before {
+  content: '\e801';
+}
+
+/*-----[ grid ]-----------------------------------------------------------------
+*/
+/* line 6, /Users/ravasthi/code/code-guide/_scss/basics/_grid.scss */
+.col {
+  padding: 2rem 1rem;
+}
+/* line 9, /Users/ravasthi/code/code-guide/_scss/basics/_grid.scss */
+.col p {
+  max-width: 40rem;
+}
+/* line 13, /Users/ravasthi/code/code-guide/_scss/basics/_grid.scss */
+.col + .col {
+  border-top: 1px solid #dfe1e8;
+  background-color: #f7f7f9;
+}
+
+@media (min-width: 38em) {
+  /* line 21, /Users/ravasthi/code/code-guide/_scss/basics/_grid.scss */
+  .col {
+    padding: 2rem;
+  }
+}
+@media (min-width: 48em) {
+  /* line 27, /Users/ravasthi/code/code-guide/_scss/basics/_grid.scss */
+  .section {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  /* line 35, /Users/ravasthi/code/code-guide/_scss/basics/_grid.scss */
+  .col {
+    display: table-cell;
+    padding: 3rem;
+    vertical-align: top;
+  }
+  /* line 42, /Users/ravasthi/code/code-guide/_scss/basics/_grid.scss */
+  .col + .col {
+    border-top: 0;
+  }
+}
+/*-----[ mixins ]---------------------------------------------------------------
+| Define mixins and reusable CSS rulesets here. An example:
+|
+|   $silver-sand: #c1c0be;
+|   $content-inner-bg: white;
+|
+|   @mixin content-inner-border
+|   {
+|     @include border-radius(5px);
+|   }
+|
+|   @mixin content-shadow
+|   {
+|     @include single-box-shadow($silver-sand, 0, 3px, 5px);
+|   }
+|
+|   @mixin content-inner-box
+|   {
+|     @include content-inner-border;
+|     @include content-shadow;
+|     background-color: $content-inner-bg;
+|   }
+*/
+/*
+** Also offer clearfix as a mixin for greater flexibility.
+** Clearfix style from <http://nicolasgallagher.com/micro-clearfix-hack/>
+*/
+/*----------[ typography ]------------------------------------------------------
+| Common font-size/line-height combinations.
+*/
+/*----------[ forms ]-----------------------------------------------------------
+*/
+/*----------[ photos/images ]---------------------------------------------------
+*/
+/*
+** Mixin for including a retina image as a background.
+**
+** Parameters:
+**  $image-name   : The filename of the image without the extension.
+**  $image-width  : The width of the 1x image.
+**  $image-height : The height of the 1x image.
+**  $type         : The extension of the image file. Defaults to 'png.'
+**  $bg-color     : The background color. Defaults to 'transparent.'
+**  $bg-repeat    : The background-repeat setting. Defaults to 'no-repeat.'
+**  $bg-pos-x     : The horizontal position of the background. Defaults to 'center.'
+**  $bg-pos-y     : The vertical position of the background. Defaults to 'center.'
+**
+*/
+/*-----[ foundation ]-----------------------------------------------------------
+*/
+/* line 3, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+@media (min-width: 48em) {
+  /* line 3, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+  html {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+}
+
+/* line 11, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+body {
+  margin: 0;
+  color: #5a5a5a;
+  font: 1rem/1.5 "PT Sans", "DejaVu Sans", "Bitstream Vera Sans", Tahoma, sans-serif;
+}
+
+/* line 19, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+a {
+  color: #08c;
+  text-decoration: none;
+}
+
+/* line 25, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 29, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0.5rem;
+  color: #2a2a2a;
+  font-weight: normal;
+  letter-spacing: -0.05em;
+}
+
+/* line 42, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+h1 {
+  font-size: 3rem;
+  line-height: 1.25em;
+}
+
+/* line 46, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.25em;
+}
+
+/* line 50, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+h3 {
+  font-size: 2rem;
+  line-height: 1.25em;
+}
+
+/* line 54, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.25em;
+}
+
+/* line 58, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+p {
+  margin: 0 0 1rem;
+}
+
+/* line 62, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+.lead {
+  font-size: 1.3rem;
+}
+
+/* line 66, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+blockquote {
+  position: relative;
+  margin: 0 1rem 1rem;
+  color: #7a7a7a;
+  font-style: italic;
+}
+
+/* line 76, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+blockquote p {
+  margin-bottom: 0;
+}
+
+/* line 80, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+ul li {
+  margin-bottom: 0.25rem;
+}
+
+/* Tighten up margin on last items */
+/* line 85, /Users/ravasthi/code/code-guide/_scss/shared/_foundation.scss */
+p:last-child,
+ul:last-child,
+blockquote:last-child {
+  margin-bottom: 0;
+}
+
+/* line 1, /Users/ravasthi/code/code-guide/_scss/shared/_code.scss */
+code,
+pre {
+  font-family: "PT Mono", Menlo, "Courier New", "Lucida Console", monospace;
+  font-size: 95%;
+}
+
+/* line 7, /Users/ravasthi/code/code-guide/_scss/shared/_code.scss */
+code {
+  border-radius: 0.2rem;
+  padding: 2px 4px;
+  color: #d44950;
+  background-color: #f7f7f9;
+  font-size: 85%;
+}
+
+/* line 17, /Users/ravasthi/code/code-guide/_scss/shared/_code.scss */
+pre {
+  display: block;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+/* line 27, /Users/ravasthi/code/code-guide/_scss/shared/_code.scss */
+pre code {
+  border: 0;
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* line 37, /Users/ravasthi/code/code-guide/_scss/shared/_code.scss */
+.highlight {
+  margin: 0;
+}
+/* line 40, /Users/ravasthi/code/code-guide/_scss/shared/_code.scss */
+.highlight pre {
+  margin-bottom: 0;
+}
+/* line 44, /Users/ravasthi/code/code-guide/_scss/shared/_code.scss */
+.highlight + .highlight {
+  margin-top: 1rem;
+}
+
+/* line 1, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.hll {
+  background-color: #ffc;
+}
+
+/*{ background: #f0f3f3; }*/
+/* line 6, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.c {
+  color: #999;
+}
+
+/* Comment */
+/* line 10, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.err {
+  color: #a00;
+  background-color: #faa;
+}
+
+/* Error */
+/* line 15, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.k {
+  color: #069;
+}
+
+/* Keyword */
+/* line 19, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.o {
+  color: #555;
+}
+
+/* Operator */
+/* line 23, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.cm {
+  color: #999;
+}
+
+/* Comment.Multiline */
+/* Edited to remove italics and make into comment */
+/* line 27, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.cp {
+  color: #099;
+}
+
+/* Comment.Preproc */
+/* line 31, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.c1 {
+  color: #999;
+}
+
+/* Comment.Single */
+/* line 35, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.cs {
+  color: #999;
+}
+
+/* Comment.Special */
+/* line 39, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.gd {
+  border: 1px solid #c00;
+  background-color: #fcc;
+}
+
+/* Generic.Deleted */
+/* line 45, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+/* line 49, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.gr {
+  color: #f00;
+}
+
+/* Generic.Error */
+/* line 53, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.gh {
+  color: #030;
+}
+
+/* Generic.Heading */
+/* line 57, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.gi {
+  border: 1px solid #0c0;
+  background-color: #cfc;
+}
+
+/* Generic.Inserted */
+/* line 63, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.go {
+  color: #aaa;
+}
+
+/* Generic.Output */
+/* line 67, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.gp {
+  color: #009;
+}
+
+/* Generic.Prompt */
+/* Generic.Strong */
+/* line 73, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.gu {
+  color: #030;
+}
+
+/* Generic.Subheading */
+/* line 77, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.gt {
+  color: #9c6;
+}
+
+/* Generic.Traceback */
+/* line 81, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.kc {
+  color: #069;
+}
+
+/* Keyword.Constant */
+/* line 85, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.kd {
+  color: #069;
+}
+
+/* Keyword.Declaration */
+/* line 89, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.kn {
+  color: #069;
+}
+
+/* Keyword.Namespace */
+/* line 93, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.kp {
+  color: #069;
+}
+
+/* Keyword.Pseudo */
+/* line 97, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.kr {
+  color: #069;
+}
+
+/* Keyword.Reserved */
+/* line 101, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.kt {
+  color: #078;
+}
+
+/* Keyword.Type */
+/* line 105, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.m {
+  color: #f60;
+}
+
+/* Literal.Number */
+/* line 109, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.s {
+  color: #d44950;
+}
+
+/* Literal.String */
+/* line 113, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.na {
+  color: #4f9fcf;
+}
+
+/* Name.Attribute */
+/* line 117, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.nb {
+  color: #366;
+}
+
+/* Name.Builtin */
+/* line 121, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.nc {
+  color: #0a8;
+}
+
+/* Name.Class */
+/* line 125, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.no {
+  color: #360;
+}
+
+/* Name.Constant */
+/* line 129, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.nd {
+  color: #99f;
+}
+
+/* Name.Decorator */
+/* line 133, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.ni {
+  color: #999;
+}
+
+/* Name.Entity */
+/* line 137, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.ne {
+  color: #c00;
+}
+
+/* Name.Exception */
+/* line 141, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.nf {
+  color: #c0f;
+}
+
+/* Name.Function */
+/* line 145, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.nl {
+  color: #99f;
+}
+
+/* Name.Label */
+/* line 149, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.nn {
+  color: #0cf;
+}
+
+/* Name.Namespace */
+/* line 153, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.nt {
+  color: #2f6f9f;
+}
+
+/* Name.Tag */
+/* line 157, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.nv {
+  color: #033;
+}
+
+/* Name.Variable */
+/* line 161, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.ow {
+  color: #000;
+}
+
+/* Operator.Word */
+/* line 165, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.w {
+  color: #bbb;
+}
+
+/* Text.Whitespace */
+/* line 169, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.mf {
+  color: #f60;
+}
+
+/* Literal.Number.Float */
+/* line 173, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.mh {
+  color: #f60;
+}
+
+/* Literal.Number.Hex */
+/* line 177, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.mi {
+  color: #f60;
+}
+
+/* Literal.Number.Integer */
+/* line 181, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.mo {
+  color: #f60;
+}
+
+/* Literal.Number.Oct */
+/* line 185, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.sb {
+  color: #c30;
+}
+
+/* Literal.String.Backtick */
+/* line 189, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.sc {
+  color: #c30;
+}
+
+/* Literal.String.Char */
+/* line 193, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.sd {
+  color: #c30;
+  font-style: italic;
+}
+
+/* Literal.String.Doc */
+/* line 199, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.s2 {
+  color: #c30;
+}
+
+/* Literal.String.Double */
+/* line 203, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.se {
+  color: #c30;
+}
+
+/* Literal.String.Escape */
+/* line 207, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.sh {
+  color: #c30;
+}
+
+/* Literal.String.Heredoc */
+/* line 211, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.si {
+  color: #a00;
+}
+
+/* Literal.String.Interpol */
+/* line 215, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.sx {
+  color: #c30;
+}
+
+/* Literal.String.Other */
+/* line 219, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.sr {
+  color: #3aa;
+}
+
+/* Literal.String.Regex */
+/* line 223, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.s1 {
+  color: #c30;
+}
+
+/* Literal.String.Single */
+/* line 227, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.ss {
+  color: #fc3;
+}
+
+/* Literal.String.Symbol */
+/* line 231, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.bp {
+  color: #366;
+}
+
+/* Name.Builtin.Pseudo */
+/* line 235, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.vc {
+  color: #033;
+}
+
+/* Name.Variable.Class */
+/* line 239, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.vg {
+  color: #033;
+}
+
+/* Name.Variable.Global */
+/* line 243, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.vi {
+  color: #033;
+}
+
+/* Name.Variable.Instance */
+/* line 247, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.il {
+  color: #f60;
+}
+
+/* Literal.Number.Integer.Long */
+/* line 251, /Users/ravasthi/code/code-guide/_scss/shared/_syntax.scss */
+.css .o,
+.css .o + .nt,
+.css .nt + .nt {
+  color: #999;
+}
+
+/*-----[ masthead ]-------------------------------------------------------------
+*/
+/* line 3, /Users/ravasthi/code/code-guide/_scss/_masthead.scss */
+.masthead {
+  padding: 3rem 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #2a3440;
+  text-align: center;
+}
+/* line 11, /Users/ravasthi/code/code-guide/_scss/_masthead.scss */
+.masthead h1 {
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+/* line 17, /Users/ravasthi/code/code-guide/_scss/_masthead.scss */
+.masthead .icon {
+  display: inline-block;
+  margin: 0 0.5rem;
+  font-size: 3rem;
+}
+/* line 25, /Users/ravasthi/code/code-guide/_scss/_masthead.scss */
+.masthead a {
+  color: white;
+}
+/* line 28, /Users/ravasthi/code/code-guide/_scss/_masthead.scss */
+.masthead a:hover {
+  color: white;
+}
+@media (min-width: 38em) {
+  /* line 3, /Users/ravasthi/code/code-guide/_scss/_masthead.scss */
+  .masthead {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* line 39, /Users/ravasthi/code/code-guide/_scss/_masthead.scss */
+.masthead-nav {
+  font-size: 1.25rem;
+  line-height: 1.25em;
+}
+/* line 42, /Users/ravasthi/code/code-guide/_scss/_masthead.scss */
+.masthead-nav a {
+  margin-right: 1rem;
+  transition: all 0.15s ease-in-out;
+  text-decoration: none;
+}
+
+/*-----[ sections ]-------------------------------------------------------------
+*/
+/*----------[ general ]---------------------------------------------------------
+*/
+/* line 5, /Users/ravasthi/code/code-guide/_scss/_sections.scss */
+.section {
+  border-bottom: 1px solid #dfe1e8;
+}
+
+/*----------[ toc ]-------------------------------------------------------------
+*/
+/* line 11, /Users/ravasthi/code/code-guide/_scss/_sections.scss */
+.toc .col + .col {
+  background-color: white;
+}
+
+/*----------[ heading ]---------------------------------------------------------
+*/
+/* line 17, /Users/ravasthi/code/code-guide/_scss/_sections.scss */
+.heading {
+  padding: 2rem 1rem 1.5rem;
+  background-color: #dfe1e8;
+}
+@media (min-width: 38em) {
+  /* line 17, /Users/ravasthi/code/code-guide/_scss/_sections.scss */
+  .heading {
+    padding: 3rem 3rem 2.5rem;
+  }
+}
+
+/*----------[ footer ]----------------------------------------------------------
+*/
+/* line 29, /Users/ravasthi/code/code-guide/_scss/_sections.scss */
+.footer {
+  padding: 3rem 1rem;
+  font-size: 90%;
+  text-align: center;
+}
+/* line 36, /Users/ravasthi/code/code-guide/_scss/_sections.scss */
+.footer p {
+  margin-bottom: 0.5rem;
+}
+
+/* line 41, /Users/ravasthi/code/code-guide/_scss/_sections.scss */
+.quick-links {
+  margin-left: 0;
+  list-style: none;
+}
+
+/* line 47, /Users/ravasthi/code/code-guide/_scss/_sections.scss */
+.quick-links li {
+  display: inline;
+}

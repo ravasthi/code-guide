@@ -33,15 +33,14 @@ $secondary-subheading-text-line-height : 1.25em;
   font-weight: normal;
   font-style: normal;
 
-  src: url('font/fontello.eot#iefix') format('embedded-opentype'),
-  url('font/fontello.woff') format('woff'),
-  url('font/fontello.ttf') format('truetype'),
-  url('font/fontello.svg') format('svg');
-  src: url('font/fontello.eot');
+  src: url('/fonts/fontello.eot#iefix') format('embedded-opentype'),
+       url('/fonts/fontello.woff') format('woff'),
+       url('/fonts/fontello.ttf') format('truetype'),
+       url('/fonts/fontello.svg') format('svg');
+  src: url('/fonts/fontello.eot');
 }
 
-[class^='icon-']:before,
-[class*=' icon-']:before {
+.icon:before {
   display: inline-block;
 
   margin-right: 0.2em;
