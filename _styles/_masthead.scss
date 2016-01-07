@@ -1,48 +1,93 @@
 /*-----[ masthead ]-------------------------------------------------------------
 */
+/*----------[ default ]---------------------------------------------------------
+*/
 .masthead {
-  padding: 3rem 1rem;
+  padding: $body-text-line-height $gutter-width;
 
   color: $masthead-text-color;
   background-color: $masthead-bg;
 
-  text-align: center;
-
   h1 {
-    margin-bottom: 0.25rem;
+    @include large-text;
+    margin-right: 2 * $column-width;
+    margin-bottom: 0;
+    color: $masthead-heading-text-color;
 
-    color: #fff;
+    display: inline-block;
   }
 
   .icon {
     display: inline-block;
-
-    margin: 0 0.5rem;
-
-    font-size: 3rem;
   }
 
   a {
     color: $masthead-link-color;
+
+    transition: all 0.15s ease-in-out;
 
     &:hover {
       color: $masthead-link-active-color;
     }
   }
 
-  @media (min-width: 38em) {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  .page-title a {
+    color: $masthead-heading-text-color;
+
+    &:hover {
+      color: darken($masthead-heading-text-color, 10);
+
+      text-decoration: none;
+    }
+  }
+
+  .masthead-nav {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      margin-right: $column-width;
+
+      text-decoration: none;
+    }
+  }
+
+  .icon-write, .lead {
+    display: none;
   }
 }
 
-.masthead-nav {
-  @include large-text;
+/*----------[ home ]------------------------------------------------------------
+*/
+#home {
+  .masthead {
+    padding: 3rem 1rem;
 
-  a {
-    margin-right: $column-width;
+    text-align: center;
 
-    transition: all 0.15s ease-in-out;
-    text-decoration: none;
+    h1 {
+      @include heading-text;
+      margin-right: 0;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+
+    .icon-write {
+      display: inline-block;
+      font-size: 3rem;
+    }
+
+    .lead {
+      display: block;
+    }
+
+    @media (min-width: 38em) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  .masthead-nav {
+    @include large-text;
   }
 }
