@@ -2,12 +2,13 @@
 require:
 - jekyll-compass
 
-project_path: "/Users/ravasthi/code/code-guide"
+project_path: "/Users/ravasthi/code/code-guide/"
 http_path: "/"
 css_dir: css
+css_path: css
 sass_dir: _scss
 images_dir: images
-javascripts_dir: javascripts
+javascripts_dir: scripts
 
 import_paths:
 - _scss/basics

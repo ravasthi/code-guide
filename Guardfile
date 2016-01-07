@@ -3,6 +3,10 @@ guard 'jekyll-plus', serve: true do
   ignore /^_site/
 end
 
+guard :compass, compile_on_start: true do
+  watch(%r{_scss/.+\.scss})
+end
+
 guard :livereload do
   watch /.*/
 end

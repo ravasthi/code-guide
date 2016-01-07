@@ -5,6 +5,7 @@ gem 'github-pages'
 
 # Moar better CSS
 gem 'jekyll-compass'
+gem 'guard-compass'
 
 # Guard, Pow and Livereload
 gem 'guard'
