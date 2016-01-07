@@ -4,7 +4,7 @@ $column-width: 1rem;
 $gutter-width: 3rem;
 
 .col {
-  padding: 2rem 1rem;
+  padding: $body-text-line-height $gutter-width/3;
 
   p {
     max-width: 40rem;
@@ -19,7 +19,7 @@ $gutter-width: 3rem;
 
 @media (min-width: 38em) {
   .col {
-    padding: 2rem;
+    padding: 2 * $body-text-line-height $gutter-width;
   }
 }
 
@@ -35,7 +35,7 @@ $gutter-width: 3rem;
   .col {
     display: table-cell;
 
-    padding: 3rem;
+    padding: 2 * $body-text-line-height $gutter-width;
 
     vertical-align: top;
 

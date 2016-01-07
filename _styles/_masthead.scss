@@ -3,7 +3,7 @@
 /*----------[ default ]---------------------------------------------------------
 */
 .masthead {
-  padding: $body-text-line-height $gutter-width;
+  padding: $body-text-line-height $gutter-width/3;
 
   color: $masthead-text-color;
   background-color: $masthead-bg;
@@ -54,6 +54,12 @@
 
   .icon-write, .lead {
     display: none;
+  }
+
+  @media (min-width: 38em)
+  {
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
   }
 }
 

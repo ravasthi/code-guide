@@ -111,7 +111,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 */
 /* line 6, /Users/ravasthi/code/code-guide/_styles/basics/_grid.scss */
 .col {
-  padding: 2rem 1rem;
+  padding: 1.5em 1rem;
 }
 /* line 9, /Users/ravasthi/code/code-guide/_styles/basics/_grid.scss */
 .col p {
@@ -126,7 +126,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @media (min-width: 38em) {
   /* line 21, /Users/ravasthi/code/code-guide/_styles/basics/_grid.scss */
   .col {
-    padding: 2rem;
+    padding: 3em 3rem;
   }
 }
 @media (min-width: 48em) {
@@ -140,7 +140,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   /* line 35, /Users/ravasthi/code/code-guide/_styles/basics/_grid.scss */
   .col {
     display: table-cell;
-    padding: 3rem;
+    padding: 3em 3rem;
     vertical-align: top;
   }
   /* line 42, /Users/ravasthi/code/code-guide/_styles/basics/_grid.scss */
@@ -265,35 +265,45 @@ h4 {
 }
 
 /* line 58, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
-p {
-  margin: 0 0 1rem;
+p,
+dl,
+ol,
+ul {
+  margin: 0 0 1.5em;
 }
 
-/* line 62, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 65, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 .lead {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
+  line-height: 1.25em;
 }
 
-/* line 66, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 69, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 blockquote {
   position: relative;
   margin: 0 1rem 1rem;
   color: #7a7a7a;
   font-style: italic;
 }
-
-/* line 76, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 78, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 blockquote p {
   margin-bottom: 0;
 }
 
-/* line 80, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 83, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+ul {
+  margin-bottom: 1.5em;
+  margin-left: 1rem;
+  list-style: disc;
+}
+
+/* line 90, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 ul li {
   margin-bottom: 0.25rem;
 }
 
 /* Tighten up margin on last items */
-/* line 85, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 95, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 p:last-child,
 ul:last-child,
 blockquote:last-child {
@@ -724,7 +734,7 @@ pre code {
 */
 /* line 5, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
 .masthead {
-  padding: 1.5em 3rem;
+  padding: 1.5em 1rem;
   color: rgba(255, 255, 255, 0.5);
   background-color: #2a3440;
 }
@@ -773,15 +783,22 @@ pre code {
 .masthead .icon-write, .masthead .lead {
   display: none;
 }
+@media (min-width: 38em) {
+  /* line 5, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
+  .masthead {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
 
 /*----------[ home ]------------------------------------------------------------
 */
-/* line 63, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
+/* line 69, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
 #home .masthead {
   padding: 3rem 1rem;
   text-align: center;
 }
-/* line 68, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
+/* line 74, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
 #home .masthead h1 {
   font-size: 3rem;
   line-height: 1.25em;
@@ -789,23 +806,23 @@ pre code {
   margin-bottom: 0.25rem;
   display: block;
 }
-/* line 75, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
+/* line 81, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
 #home .masthead .icon-write {
   display: inline-block;
   font-size: 3rem;
 }
-/* line 80, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
+/* line 86, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
 #home .masthead .lead {
   display: block;
 }
 @media (min-width: 38em) {
-  /* line 63, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
+  /* line 69, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
   #home .masthead {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
 }
-/* line 90, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
+/* line 96, /Users/ravasthi/code/code-guide/_styles/_masthead.scss */
 #home .masthead-nav {
   font-size: 1.25rem;
   line-height: 1.25em;
@@ -831,36 +848,40 @@ pre code {
 */
 /* line 17, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
 .heading {
-  padding: 2rem 1rem 1.5rem;
+  padding: 1.5em 1rem;
   background-color: #dfe1e8;
+}
+/* line 22, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
+.heading h1, .heading h2, .heading h3, .heading h4 {
+  margin-bottom: 0;
 }
 @media (min-width: 38em) {
   /* line 17, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
   .heading {
-    padding: 3rem 3rem 2.5rem;
+    padding: 3em 3rem;
   }
 }
 
 /*----------[ footer ]----------------------------------------------------------
 */
-/* line 29, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
+/* line 33, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
 .footer {
   padding: 3rem 1rem;
   font-size: 90%;
   text-align: center;
 }
-/* line 36, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
+/* line 40, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
 .footer p {
   margin-bottom: 0.5rem;
 }
 
-/* line 41, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
+/* line 45, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
 .quick-links {
   margin-left: 0;
   list-style: none;
 }
 
-/* line 47, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
+/* line 51, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
 .quick-links li {
   display: inline;
 }

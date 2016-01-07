@@ -15,12 +15,16 @@
 /*----------[ heading ]---------------------------------------------------------
 */
 .heading {
-  padding: 2rem 1rem 1.5rem;
+  padding: $body-text-line-height $gutter-width/3;
 
   background-color: $section-border;
 
+  h1, h2, h3, h4 {
+    margin-bottom: 0;
+  }
+
   @media (min-width: 38em) {
-    padding: 3rem 3rem 2.5rem;
+    padding: 2 * $body-text-line-height $gutter-width;
   }
 }
 

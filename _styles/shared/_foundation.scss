@@ -55,12 +55,15 @@ h4 {
   @include large-text;
 }
 
-p {
-  margin: 0 0 1rem;
+p,
+dl,
+ol,
+ul {
+  margin: 0 0 $body-text-line-height;
 }
 
 .lead {
-  font-size: 1.3rem;
+  @include large-text;
 }
 
 blockquote {
@@ -71,10 +74,17 @@ blockquote {
   color: $secondary-text-color;
 
   font-style: italic;
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
-blockquote p {
-  margin-bottom: 0;
+ul {
+  margin-bottom: $body-text-line-height;
+  margin-left: $column-width;
+
+  list-style: disc;
 }
 
 ul li {
