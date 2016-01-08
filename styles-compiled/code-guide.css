@@ -230,6 +230,16 @@ a:hover {
 }
 
 /* line 29, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+em {
+  font-style: italic;
+}
+
+/* line 33, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 37, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 h1,
 h2,
 h3,
@@ -240,31 +250,31 @@ h4 {
   letter-spacing: -0.05em;
 }
 
-/* line 42, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 50, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 h1 {
   font-size: 3rem;
   line-height: 1.25em;
 }
 
-/* line 46, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 54, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 h2 {
   font-size: 2.5rem;
   line-height: 1.25em;
 }
 
-/* line 50, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 58, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 h3 {
   font-size: 2rem;
   line-height: 1.25em;
 }
 
-/* line 54, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 62, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 h4 {
   font-size: 1.25rem;
   line-height: 1.25em;
 }
 
-/* line 58, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 66, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 p,
 dl,
 ol,
@@ -272,38 +282,38 @@ ul {
   margin: 0 0 1.5em;
 }
 
-/* line 65, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 73, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 .lead {
   font-size: 1.25rem;
   line-height: 1.25em;
 }
 
-/* line 69, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 77, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 blockquote {
   position: relative;
   margin: 0 1rem 1rem;
   color: #7a7a7a;
   font-style: italic;
 }
-/* line 78, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 86, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 blockquote p {
   margin-bottom: 0;
 }
 
-/* line 83, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 91, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 ul {
   margin-bottom: 1.5em;
   margin-left: 1rem;
   list-style: disc;
 }
 
-/* line 90, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 98, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 ul li {
   margin-bottom: 0.25rem;
 }
 
 /* Tighten up margin on last items */
-/* line 95, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 103, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 p:last-child,
 ul:last-child,
 blockquote:last-child {
@@ -852,7 +862,10 @@ pre code {
   background-color: #dfe1e8;
 }
 /* line 22, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
-.heading h1, .heading h2, .heading h3, .heading h4 {
+.heading h1,
+.heading h2,
+.heading h3,
+.heading h4 {
   margin-bottom: 0;
 }
 @media (min-width: 38em) {
@@ -864,24 +877,29 @@ pre code {
 
 /*----------[ footer ]----------------------------------------------------------
 */
-/* line 33, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
+/* line 36, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
 .footer {
   padding: 3rem 1rem;
+  color: #aaa;
   font-size: 90%;
   text-align: center;
 }
-/* line 40, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
+/* line 45, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
 .footer p {
   margin-bottom: 0.5rem;
 }
+/* line 49, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
+.footer .last-updated {
+  color: #7a7a7a;
+}
 
-/* line 45, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
+/* line 54, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
 .quick-links {
   margin-left: 0;
   list-style: none;
 }
 
-/* line 51, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
+/* line 60, /Users/ravasthi/code/code-guide/_styles/_sections.scss */
 .quick-links li {
   display: inline;
 }

@@ -5,6 +5,8 @@
 $dark-grey         : #2a2a2a;
 $charcoal-grey     : #5a5a5a;
 $mid-grey          : #7a7a7a;
+$light-grey        : #aaa;
+$pale-grey         : #cacaca;
 $palest-grey       : #f7f7f9;
 $translucent-white : rgba(white, 0.5);
 
@@ -33,3 +35,6 @@ $masthead-text-color         : $translucent-white;
 $masthead-heading-text-color : white;
 $masthead-link-color         : $translucent-white;
 $masthead-link-active-color  : white;
+
+$footer-text-color           : $light-grey;
+$footer-secondary-text-color : $mid-grey;
