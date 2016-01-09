@@ -17,6 +17,10 @@
     display: inline-block;
   }
 
+  .lead {
+    @include large-text;
+  }
+
   .icon {
     display: inline-block;
   }

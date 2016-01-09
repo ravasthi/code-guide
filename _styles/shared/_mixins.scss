@@ -91,6 +91,10 @@
   }
 }
 
+@mixin keep-together {
+  white-space: nowrap;
+}
+
 /*----------[ typography ]------------------------------------------------------
 | Common font-size/line-height combinations.
 */

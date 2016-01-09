@@ -1,3 +1,5 @@
+/*-----[ code ]-----------------------------------------------------------------
+*/
 code,
 pre {
   font-family: $monospace-text-family;
@@ -33,7 +35,6 @@ pre {
   }
 }
 
-
 .highlight {
   margin: 0;
 
@@ -43,5 +44,14 @@ pre {
 
   & + .highlight {
     margin-top: 1rem;
+  }
+}
+
+p + .highlight {
+  margin-bottom: $body-text-line-height;
+  margin-left: $column-width;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }

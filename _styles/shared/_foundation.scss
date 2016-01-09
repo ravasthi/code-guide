@@ -1,5 +1,17 @@
 /*-----[ foundation ]-----------------------------------------------------------
+| Reusable content styles. Define your application-wide styles, like links,
+| headers, body text, clearfix, etc. here. See the readme for information on
+| recommended rule order.
 */
+
+/*----------[ table of contents ]-----------------------------------------------
+| tags
+| non-semantic styles
+*/
+
+/*----------[ tags ]------------------------------------------------------------
+*/
+
 html {
   @include secondary-text;
 
@@ -70,10 +82,6 @@ ul {
   margin: 0 0 $body-text-line-height;
 }
 
-.lead {
-  @include large-text;
-}
-
 blockquote {
   position: relative;
 
@@ -95,7 +103,7 @@ ul {
   list-style: disc;
 }
 
-ul li {
+li {
   margin-bottom: 0.25rem;
 }
 
@@ -104,4 +112,10 @@ p:last-child,
 ul:last-child,
 blockquote:last-child {
   margin-bottom: 0;
+}
+
+/*----------[ non-semantic styles ]---------------------------------------------
+*/
+.keep-together {
+  @include keep-together;
 }

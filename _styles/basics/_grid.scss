@@ -6,7 +6,10 @@ $gutter-width: 3rem;
 .col {
   padding: $body-text-line-height $gutter-width/3;
 
-  p {
+  p,
+  ul,
+  ol,
+  dl {
     max-width: 40rem;
   }
 
