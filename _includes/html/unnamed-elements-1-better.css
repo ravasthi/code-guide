@@ -1,0 +1,9 @@
+.fine-print {
+  font-style: italic;
+}
+
+/* or */
+
+small {
+  font-style: italic;
+}

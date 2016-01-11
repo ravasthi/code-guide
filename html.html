@@ -19,7 +19,6 @@ layout: default
       <li><a href="#html-practicality">Practicality over purity</a></li>
       <li><a href="#html-attribute-order">Attribute order</a></li>
       <li><a href="#html-boolean-attributes">Boolean attributes</a></li>
-      <li><a href="#html-class-id-name-attributes">Class, ID, name attribute values</a></li>
       <li><a href="#html-reducing-markup">Reducing markup</a></li>
       <li><a href="#html-unnamed-elements">Unnamed non-semantic elements</a></li>
     </ul>
@@ -36,11 +35,12 @@ layout: default
   <div class="col">
     <h3>Syntax</h3>
     <ul>
-      <li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
+      <li>Use soft tabs with two spaces.</li>
       <li>Nested elements should be indented once (two spaces).</li>
       <li>Always use double quotes, never single quotes, on attributes.</li>
       <li>Don't include a trailing slash in self-closing elements—the <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 spec</a> says they're optional.</li>
       <li>Don’t omit optional closing tags (e.g. <code>&lt;/li&gt;</code> or <code>&lt;/body&gt;</code>).</li>
+      <li>Attribute values, particularly for the <code>class</code>, <code>id</code> and <code>name</code> attributes, should be in lower <code class="keep-together">spine-case</code>. Not <code>snake_case</code>. Not <code>camelCase</code>. Not, for the love of all that is good, <code class="keep-together">some-unholy_combinationOfThem</code>.</li>
     </ul>
   </div>
   <div class="col">
@@ -155,16 +155,6 @@ layout: default
   </div>
 </div>
 
-<div class="section" id="html-class-id-name-attributes">
-  <div class="col">
-    <h3>Class, ID, name attribute values</h3>
-    <p>The values for the <code>class</code>, <code>id</code> and <code>name</code> attributes should be in lower <code class="keep-together">spine-case</code>. Not <code>snake_case</code>. Not <code>camelCase</code>. Not, for the love of all that is good, <code class="keep-together">some-unholy_combinationOfThem</code>. No exceptions.</p>
-  </div>
-  <div class="col">
-    {% highlight html %}{% include html/class-id-name-attributes.html %}{% endhighlight %}
-  </div>
-</div>
-
 <div class="section" id="html-reducing-markup">
   <div class="col">
     <h3>Reducing markup</h3>
@@ -181,25 +171,11 @@ layout: default
     <p>Do not add non-semantic elements like <code>div</code> or <code>span</code> to your markup without a name. Properly-used semantic elements like <code>p</code>, <code>section</code>, <code>aside</code>, etc. do not require a name, since they hint at their content.</p>
     <p>This has the side-effect of making your CSS a lot more readable, since you’ll be using semantic selectors.</p>
 
-    {% highlight css %}
-.fine-print {
-  font-style: italic;
-}
-
-/* or */
-
-small {
-  font-style: italic;
-}
-    {% endhighlight %}
+    {% highlight css %}{% include html/unnamed-elements-1-better.css %}{% endhighlight %}
 
     <p>is way more meaningful, and has less unintended consequences, than</p>
 
-    {% highlight css %}
-p span {
-  font-style: italic;
-}
-    {% endhighlight %}
+    {% highlight css %}{% include html/unnamed-elements-2-not-good.css %}{% endhighlight %}
   </div> <!-- /.col -->
   <div class="col">
     {% highlight html %}{% include html/unnamed-elements.html %}{% endhighlight %}
