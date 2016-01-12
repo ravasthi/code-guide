@@ -4,10 +4,10 @@ page_id: home
 ---
 
 <div class="heading" id="rules">
-  <h2>Touchstones</h2>
+  <h2>Touchstones &amp; general rules</h2>
 </div>
 
-<div class="section">
+<div class="section" id="readability">
   <div class="col">
     <h3>Readability</h3>
 
@@ -20,10 +20,24 @@ page_id: home
   </div> <!-- /.col -->
 </div> <!-- /.section -->
 
-<div class="section">
+<div class="section" id="simplicity">
   <div class="col">
     <h3>Simplicity</h3>
 
     <p>When you write code with a team, <strong>simple beats clever, every time</strong>. If your clever trick requires an explanatory comment that is longer than the code itself, consider simplifying it so it’s easier to read, understand, and maintain.</p>
   </div> <!-- /.col -->
 </div> <!-- /.section -->
+
+<div class="section" id="editor-preferences">
+  <div class="col">
+    <h3>Editor preferences</h3>
+    <p>Set your editor to the following settings to avoid common code inconsistencies and dirty diffs:</p>
+    <ul>
+      <li>Use soft tabs. Preferred spaces-per-tab specified in each language guide.</li>
+      <li>Trim trailing white space on save.</li>
+      <li>Set encoding to UTF-8.</li>
+      <li>Add new line at end of files.</li>
+    </ul>
+    <p>Consider documenting and applying these preferences to your project's <code>.editorconfig</code> file. For an example, see <a href="https://github.com/twbs/bootstrap/blob/master/.editorconfig">the one in Bootstrap</a>. Learn more <a href="http://editorconfig.org">about EditorConfig</a>.</p>
+  </div>
+</div>

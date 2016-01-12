@@ -96,11 +96,21 @@ blockquote {
   }
 }
 
-ul {
+ul,
+ol {
   margin-bottom: $body-text-line-height;
+}
+
+ul {
   margin-left: $column-width;
 
   list-style: disc;
+}
+
+ol {
+  margin-left: 2 * $column-width;
+
+  list-style: decimal;
 }
 
 li {
@@ -112,6 +122,14 @@ p:last-child,
 ul:last-child,
 blockquote:last-child {
   margin-bottom: 0;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+sup {
+  vertical-align: super;
 }
 
 /*----------[ non-semantic styles ]---------------------------------------------
