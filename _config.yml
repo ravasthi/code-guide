@@ -1,9 +1,12 @@
 name:          Code Guide
 description:   Standards for developing flexible, durable, and sustainable HTML, CSS, and JavaScript.
-url:           http://codeguide.co
+url:           https://ravasthi.github.io/code-guide
 
 markdown:      rdiscount
 permalink:     pretty
 highlighter:   pygments
 
 exclude:       ['config.ru', 'Gemfile', 'Gemfile.lock', 'Guardfile', 'LICENSE.md', 'README.md']
+
+# baseurl:       http://code-guide.dev
+# host:          code-guide.dev

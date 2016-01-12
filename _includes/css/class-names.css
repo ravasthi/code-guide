@@ -1,9 +1,14 @@
-/* Bad example */
-.t { ... }
-.red { ... }
-.header { ... }
+/*
+** Egregious. If I catch you doing this,
+** next time you see me coming you better run.
+*/
+.margin-15 { … }
+.float-right { … }
 
-/* Good example */
-.tweet { ... }
-.important { ... }
-.tweet-header { ... }
+/* Bad */
+.t { … }
+.red { … }
+
+/* Good */
+.tweet { … }
+.error { … }

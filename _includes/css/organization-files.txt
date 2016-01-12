@@ -1,9 +1,17 @@
-stylesheets/
-├── normalize.css
-├── buttons.css
-├── forms.css
-├── grid.css
-├── header.css
-├── footer.css
-├── pagination.css
-└── input-group.css
+// Example file hierarchy
+basics/
+├── _colors.scss
+├── _typography.scss
+└── _grid.scss
+shared/
+├── _foundation.scss
+├── _forms.scss
+├── _mixins.scss
+├── _header.scss
+├── _footer.scss
+└── _nav.scss
+_feature-1.scss
+feature-2/
+├── _sub-feature-a.scss
+└── _sub-feature-b.scss
+_feature-3.scss

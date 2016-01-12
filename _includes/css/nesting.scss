@@ -1,9 +1,36 @@
-// Without nesting
-.table > thead > tr > th { … }
-.table > thead > tr > td { … }
+// Don't nest when it's not necessary
+.module {
+  .module-content {
+    .no-data-message {
+      font-size: 1.25em;
+      line-height: 1.5;
+      text-align: center;
+    }
+  }
+}
 
-// With nesting
-.table > thead > tr {
-  > th { … }
-  > td { … }
+// This will give you a selector that's only as long
+// as it needs to be
+.no-data-message {
+  font-size: 1.25em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+// Avoid un-nesting with &
+.child {
+  .parent & {
+    // This is confusing and might not behave as expected
+    // if .child happened to be nested in something else
+  }
+}
+
+// This is better and more understandable
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
 }

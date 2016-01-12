@@ -1,0 +1,24 @@
+/*-----[ messaging ]----------------------------------------
+*/
+/*----------[ alerts ]--------------------------------------
+*/
+.alerts {
+  .message {
+    &.error {
+      …
+    }
+
+    &.warning {
+      …
+    }
+  }
+}
+
+/*----------[ growl notifications ]-------------------------
+| Some additional context, if necessary.
+*/
+.growl {
+  .message {
+    …
+  }
+}

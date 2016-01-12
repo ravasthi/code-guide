@@ -1,0 +1,14 @@
+/* !important is bad, mmmkay? */
+.error {
+  color: red !important;
+}
+
+/*
+** Instead, increase the specificity of your
+** selector as necessary. This is easier to
+** understand the consequences of, ergo more
+** predictable.
+*/
+form .error {
+  color: red;
+}

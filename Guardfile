@@ -1,7 +1,8 @@
 guard 'jekyll-plus', serve: true, rack_config: 'config.ru' do
-  watch /.*/
-  watch /^_includes/
-  ignore /^_site/
+  watch(%r{^.+\.html})
+  watch(%r{_includes/.+\.css})
+  watch(%r{_includes/.+\.html})
+  # ignore(%r{_site})
 end
 
 guard :compass, compile_on_start: true do
@@ -9,7 +10,7 @@ guard :compass, compile_on_start: true do
 end
 
 guard :livereload, host: 'code-guide.dev' do
-  watch /.*/
+  watch(%r{_site/.+})
 end
 
 guard :pow, restart_on_start: true, restart_on_reload: false do
