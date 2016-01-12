@@ -137,3 +137,7 @@ sup {
 .keep-together {
   @include keep-together;
 }
+
+.cross-out {
+  text-decoration: line-through;
+}

@@ -354,6 +354,11 @@ sup {
   white-space: nowrap;
 }
 
+/* line 141, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+.cross-out {
+  text-decoration: line-through;
+}
+
 /*-----[ code ]-----------------------------------------------------------------
 */
 /* line 3, /Users/ravasthi/code/code-guide/_styles/shared/_code.scss */
