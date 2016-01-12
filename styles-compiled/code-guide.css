@@ -79,8 +79,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: 'fontello';
   font-weight: normal;
   font-style: normal;
-  src: url("/fonts/fontello.eot");
-  src: url("/fonts/fontello.eot#iefix") format("embedded-opentype"), url("/fonts/fontello.woff") format("woff"), url("/fonts/fontello.ttf") format("truetype"), url("/fonts/fontello.svg") format("svg");
+  src: url("../fonts/fontello.eot");
+  src: url("../fonts/fontello.eot#iefix") format("embedded-opentype"), url("../fonts/fontello.woff") format("woff"), url("../fonts/fontello.ttf") format("truetype"), url("../fonts/fontello.svg") format("svg");
 }
 /* line 43, /Users/ravasthi/code/code-guide/_styles/basics/_typography.scss */
 .icon:before {
