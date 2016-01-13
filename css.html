@@ -50,8 +50,9 @@ layout: default
       <li>Lowercase all hex values, e.g. <code>#ccc</code>.</li>
       <li>Use shorthand hex values where available, e.g. <code>#ccc</code> instead of <code>#cccccc</code>.</li>
       <li>Use the color names <code>white</code> and <code>black</code> instead of their hex counterparts: <code>#fff</code> and <code>#000</code>.</li>
-      <li>Quote attribute values in selectors, e.g. <code>input[type="text"]</code>. <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">They’re only optional in some cases</a>, and it’s a good practice for consistency.</li>
+      <li>Quote attribute values in selectors, e.g. <code>input[type='text']</code>. <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">They’re only optional in some cases</a>, and it’s a good practice for consistency.</li>
       <li>Avoid specifying units for zero values, e.g. <code>margin: 0;</code> instead of <code>margin: 0px;</code>.</li>
+      <li>Use single quotes (<code>'</code>) rather double quotes (<code>"</code>) in attribute selectors and properties. Do not use quotes in URI properties (<code>url()</code>). Exception: the <code>@charset</code> rule <a href="http://www.w3.org/TR/CSS21/syndata.html#charset" title="Syntax and basic data types">requires double quotation marks</a>.</li>
     </ul>
     <p>Questions on the terms used here? See the <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax">syntax section of the Cascading Style Sheets article</a> on Wikipedia.</p>
   </div>

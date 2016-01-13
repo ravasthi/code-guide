@@ -3,7 +3,7 @@
   display: inline-block;
   width: 16px;
   height: 15px;
-  background-image: url('../img/sprite.png');
+  background-image: url(../images/sprite.png);
 }
 
 /* Treat single declarations the same as multiple declarations */
