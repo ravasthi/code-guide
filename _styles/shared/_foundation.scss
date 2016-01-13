@@ -141,3 +141,7 @@ sup {
 .cross-out {
   text-decoration: line-through;
 }
+
+.indent {
+  margin-left: $column-width;
+}

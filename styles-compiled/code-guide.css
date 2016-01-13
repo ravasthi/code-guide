@@ -359,6 +359,11 @@ sup {
   text-decoration: line-through;
 }
 
+/* line 145, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+.indent {
+  margin-left: 1rem;
+}
+
 /*-----[ code ]-----------------------------------------------------------------
 */
 /* line 3, /Users/ravasthi/code/code-guide/_styles/shared/_code.scss */

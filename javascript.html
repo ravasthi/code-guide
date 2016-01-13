@@ -18,6 +18,7 @@ layout: default
       <li><a href="#js-function-declarations">Function declarations</a></li>
       <li><a href="#js-names">Names</a></li>
       <li><a href="#js-statements">Statements</a></li>
+      <li><a href="#js-other-conventions">Other conventions</a></li>
     </ul>
   </div>
 </div>
@@ -208,12 +209,65 @@ layout: default
     <h4><code>with</code> statement</h4>
     <p>The <code>with</code> statement <a href="http://yuiblog.com/blog/2006/04/11/with-statement-considered-harmful/" title="with Statement Considered Harmful">should not be used</a>:</p>
     <ul>
-      <li>It creates a lexical scope at runtime, which is dangerously unpredictable.</li>
+      <li>It creates a lexical scope at runtime, which makes your code dangerously unpredictable.</li>
       <li>Its presence disables optimizations in the JavaScript compiler, which makes your code slower.</li>
       <li>Also, it's not allowed in strict mode.</li>
     </ul>
   </div>
   <div class="col">
     {% highlight js %}{% include js/statements.js %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="js-other-conventions">
+  <div class="col">
+    <h3>Other conventions</h3>
+
+    <h4>Use strict mode</h4>
+    <p>Always use strict mode. It disables such undesirable features as implicit global variable declaration and in general makes your code behave more predictably.</p>
+
+    <h4>Named function expressions</h4>
+    <p>Always use named function expressions:</p>
+
+    <ul>
+      <li>You'll get a reliable self-reference, and</li>
+      <li>They make your stack traces much easier to decipher.</li>
+    </ul>
+
+    <h4><code>{}</code> and <code>[]</code></h4>
+    <p>Use <code>{}</code> instead of <code>new Object()</code>. Use <code>[]</code> instead of <code>new Array()</code>.</p>
+
+    <p>Use arrays when the member names would be sequential integers. Use objects when the member names are arbitrary strings or names.</p>
+
+    <h4><code>,</code> (comma) Operator</h4>
+    <p>Avoid the use of the comma operator. (This does not apply to the comma <em>separator</em>, which is used in object literals, array literals, <code>var</code> statements, and parameter lists.)</p>
+
+    <h4>Block scope</h4>
+    <p>In JavaScript blocks do not have scope<sup>†</sup>. Only functions have scope. Do not use blocks except as required by the compound statements.</p>
+
+    <p><sup>†</sup> ECMAScript 6 (ES6/ES2015) introduces the <code>let</code> keyword, which is effectively a way to enforce block scope. Even so, as stated above, avoid creating blocks around <code>let</code>, and only use blocks as required by compound statements.</p>
+
+    <h4>Assignment expressions</h4>
+    <p>Avoid doing assignments in the condition part of <code>if</code> and <code>while</code> statements.</p>
+
+    <p>Is assignment or comparison intended? Avoid constructs that cannot easily be determined to be correct.</p>
+
+    <h4><code>===</code> and <code>!==</code> operators</h4>
+    <p>Use the <code>===</code> and <code>!==</code> operators. The <code>==</code> and <code>!=</code> operators do type coercion and should not be used.</p>
+
+    <h4>Confusing pluses and minuses</h4>
+    <p>Be careful to not follow a <code>+</code> with <code>+</code> or <code>++</code>. This pattern can be confusing. Insert parens between them to make your intention clear.</p>
+
+    <h4><code>eval</code> is evil</h4>
+    <p>The <code>eval</code> function is the most misused feature of JavaScript. Avoid it. Similar to the <code>with</code> statement:</p>
+    <ul>
+      <li>It dynamically modifies lexical scope at runtime.</li>
+      <li>Its presence disables optimizations in the JavaScript compiler.</li>
+      <li>Strict mode prevents <code>eval</code> from modifying lexical scope.</li>
+    </ul>
+    <p><code>eval</code> has aliases. Do not use the <code>Function</code> constructor. Do not pass strings to <code>setTimeout</code> or <code>setInterval</code>.</p>
+  </div>
+  <div class="col">
+    {% highlight js %}{% include js/other-conventions.js %}{% endhighlight %}
   </div>
 </div>
