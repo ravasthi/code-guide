@@ -1,0 +1,25 @@
+// Bad
+.module {
+  border: 1px solid #eee;
+}
+
+
+// Better
+$light-grey: #eee;
+
+.module {
+  border: 1px solid $light-grey;
+}
+
+
+// Best
+$light-blue: #def;
+$light-grey: #eee;
+
+// Now you can change this to $light-blue in one place,
+// and it shows up everywhere $section-border is used. Boom!
+$section-border: $light-grey;
+
+.module {
+  border: 1px solid $section-border;
+}

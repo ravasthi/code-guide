@@ -1,9 +1,9 @@
-// Bad example
+// Bad
 .element {
   margin: 10px 0 @variable*2 10px;
 }
 
-// Good example
+// Good
 .element {
   margin: 10px 0 (@variable * 2) 10px;
 }

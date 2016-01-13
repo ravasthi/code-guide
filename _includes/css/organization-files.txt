@@ -1,4 +1,3 @@
-// Example file hierarchy
 basics/
 ├── _colors.scss
 ├── _typography.scss

@@ -11,8 +11,11 @@ layout: default
     <h4><a href="#css">CSS</a></h4>
     <ul>
       <li><a href="#css-syntax">CSS syntax</a></li>
+      <li><a href="#css-comments">Comments</a></li>
+      <li><a href="#css-identifiers">Class and ID names</a></li>
       <li><a href="#css-declaration-order">Declaration order</a></li>
       <li><a href="#css-import">Don't use <code>@import</code></a></li>
+      <li><a href="#css-important"><code>!important</code></a></li>
       <li><a href="#css-media-queries">Media query placement</a></li>
       <li><a href="#css-prefixed-properties">Prefixed properties</a></li>
       <li><a href="#css-single-declarations">Rules with single declarations</a></li>
@@ -20,9 +23,7 @@ layout: default
       <li><a href="#css-selectors">Selectors</a></li>
       <li><a href="#css-nesting">Nesting in Less and Sass</a></li>
       <li><a href="#css-operators">Operators in Less and Sass</a></li>
-      <li><a href="#css-comments">Comments</a></li>
-      <li><a href="#css-identifiers">Class and ID names</a></li>
-      <li><a href="#css-important"><code>!important</code></a></li>
+      <li><a href="#css-colors">Colors in Less and Sass</a></li>
       <li><a href="#css-organization">Organization</a></li>
     </ul>
   </div>
@@ -59,6 +60,34 @@ layout: default
   </div>
 </div>
 
+<div class="section" id="css-comments">
+  <div class="col">
+    <h3>Comments</h3>
+    <p>Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name.</p>
+    <p>Be sure to write in complete sentences for larger comments and succinct phrases for general notes.</p>
+  </div>
+  <div class="col">
+    {% highlight css %}{% include css/comments.css %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="css-identifiers">
+  <div class="col">
+    <h3>Class and ID names</h3>
+    <ul>
+      <li>Keep classes and IDs in lower <code>spine-case</code> (not <code>snake_case</code> or <code>camelCase</code>).</li>
+      <li>Keep classes as short and succinct as possible, but avoid excessive and arbitrary shorthand notation. <code>.btn</code> is recognizable as <em>button</em>, but <code>.s</code> doesn't mean anything.</li>
+      <li>Use meaningful names and avoid purely presentational ones; the latter is a sign of laziness and sloppy code.</li>
+      <li>Do <em>not</em> use special prefixes like <code>.e-*</code> or <code>.js-*</code> to indicate an element as a target of behavior (as opposed to style). More often than not they're just doubling up on something that already has a meaningful name and only serve to make your code harder to read.</li>
+    </ul>
+    <p>These rules also apply when creating Sass and Less variable names.</p>
+  </div>
+  <div class="col">
+    {% highlight css %}{% include css/class-names.css %}{% endhighlight %}
+    {% highlight html %}{% include css/class-names.html %}{% endhighlight %}
+  </div>
+</div>
+
 <div class="section" id="css-declaration-order">
   <div class="col">
     <h3>Declaration order</h3>
@@ -87,13 +116,28 @@ layout: default
     <p>Compared to <code>&lt;link&gt;</code>s, <code>@import</code> is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:</p>
     <ul>
       <li>Use multiple <code>&lt;link&gt;</code> elements</li>
-      <li>Compile your CSS with a preprocessor like Sass or Less into a single file</li>
+      <li>Compile your CSS with a preprocessor like Sass or Less into a single file. (<code>@import</code> is okay in this case)</li>
       <li>Concatenate your CSS files with features provided in Rails, Jekyll, and other environments</li>
     </ul>
     <p>For more information, <a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/">read this article by Steve Souders</a>.</p>
   </div>
   <div class="col">
     {% highlight html %}{% include css/import.html %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="css-important">
+  <div class="col">
+    <h3>NEVER USE <code>!important</code>. I MEAN IT.</h3>
+    <ul>
+      <li>There is precisely one legitimate use of <code>!important</code>: when you need to override a style and you don't have access to the stylesheet in which it is defined, and therefore no inkling as to its specificity.</li>
+      <li>If you are trying to override a style in your own code base, do not use <code>!important</code>. It's an admission of failure, as well as the opening shot in a (thermonuclear) war of specificity against yourself.</li>
+      <li>CI builds will be configured to fail on use of <code>!important</code>.</li>
+    </ul>
+    <p>In short, don't do it.</p>
+  </div>
+  <div class="col">
+    {% highlight css %}{% include css/important.css %}{% endhighlight %}
   </div>
 </div>
 
@@ -192,49 +236,16 @@ layout: default
   </div>
 </div>
 
-<div class="section" id="css-comments">
+<div class="section" id="css-colors">
   <div class="col">
-    <h3>Comments</h3>
-    <p>Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name.</p>
-    <p>Be sure to write in complete sentences for larger comments and succinct phrases for general notes.</p>
+    <h3>Colors in Less and Sass</h3>
+    <p>Don't ever use raw hex colors in Less and Sass. Define them with human-readable variable names and use those. Better yet, assign colors to variables indicating their semantic usage.</p>
+    <p>Using semantic color variables throughout your code is more readable and easier to change.</p>
   </div>
   <div class="col">
-    {% highlight css %}{% include css/comments.css %}{% endhighlight %}
-  </div>
-</div>
-
-<div class="section" id="css-identifiers">
-  <div class="col">
-    <h3>Class and ID names</h3>
-    <ul>
-      <li>Keep classes and IDs in lower <code>spine-case</code> (not <code>snake_case</code> or <code>camelCase</code>).</li>
-      <li>Keep classes as short and succinct as possible, but avoid excessive and arbitrary shorthand notation. <code>.btn</code> is recognizable as <em>button</em>, but <code>.s</code> doesn't mean anything.</li>
-      <li>Use meaningful names and avoid purely presentational ones; the latter is a sign of laziness and sloppy code.</li>
-      <li>Do <em>not</em> use special prefixes like <code>.e-*</code> or <code>.js-*</code> to indicate an element as a target of behavior (as opposed to style). More often than not they're just doubling up on something that already has a meaningful name and only serve to make your code harder to read.</li>
-    </ul>
-    <p>These rules also apply when creating Sass and Less variable names.</p>
-  </div>
-  <div class="col">
-    {% highlight css %}{% include css/class-names.css %}{% endhighlight %}
-    {% highlight html %}{% include css/class-names.html %}{% endhighlight %}
+    {% highlight scss %}{% include css/colors.scss %}{% endhighlight %}
   </div>
 </div>
-
-<div class="section" id="css-important">
-  <div class="col">
-    <h3>NEVER USE <code>!important</code>. I MEAN IT.</h3>
-    <ul>
-      <li>There is precisely one legitimate use of <code>!important</code>: when you need to override a style and you don't have access to the stylesheet in which it is defined, and therefore no inkling as to its specificity.</li>
-      <li>If you are trying to override a style in your own code base, do not use <code>!important</code>. It's an admission of failure, as well as the opening shot in a (thermonuclear) war of specificity against yourself.</li>
-      <li>CI builds will fail on use of <code>!important</code>.</li>
-    </ul>
-    <p>In short, don't do it.</p>
-  </div>
-  <div class="col">
-    {% highlight css %}{% include css/important.css %}{% endhighlight %}
-  </div>
-</div>
-
 
 <div class="section" id="css-organization">
   <div class="col">
@@ -245,10 +256,12 @@ layout: default
       <li>Use consistent white space to your advantage when separating sections of code for scanning larger documents.</li>
       <li>When using multiple CSS files, bias toward breaking them down by component instead of page. Pages can be rearranged and components moved.</li>
     </ul>
+
+    <p>An example file hierarchy:</p>
+    {% highlight text %}{% include css/organization-files.txt %}{% endhighlight %}
   </div>
   <div class="col">
     {% highlight scss %}{% include css/organization-comments.scss %}{% endhighlight %}
-    {% highlight text %}{% include css/organization-files.txt %}{% endhighlight %}
   </div>
 </div>
 

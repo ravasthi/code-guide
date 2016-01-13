@@ -33,11 +33,11 @@ $secondary-subheading-text-line-height : 1.25em;
   font-weight: normal;
   font-style: normal;
 
-  src: url('./fonts/fontello.eot');
-  src: url('./fonts/fontello.eot#iefix') format('embedded-opentype'),
-       url('./fonts/fontello.woff') format('woff'),
-       url('./fonts/fontello.ttf') format('truetype'),
-       url('./fonts/fontello.svg') format('svg');
+  src: url('../fonts/fontello.eot');
+  src: url('../fonts/fontello.eot#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff') format('woff'),
+       url('../fonts/fontello.ttf') format('truetype'),
+       url('../fonts/fontello.svg') format('svg');
 }
 
 .icon:before {
