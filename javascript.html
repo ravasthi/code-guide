@@ -141,9 +141,11 @@ layout: default
 
     <p>Most variables and functions should start with a lower case letter.</p>
 
-    <p>Constructor functions that must be used with the new prefix should start with a capital letter. JavaScript issues neither a compile-time warning nor a run-time warning if a required new is omitted. Bad things can happen if new is not used, so the capitalization convention is the only defense we have.</p>
+    <p>Constructor functions that must be used with the <code>new</code> prefix should start with a capital letter. JavaScript issues neither a compile-time warning nor a run-time warning if a required <code>new</code> is omitted. Bad things can happen if <code>new</code> is not used, so the capitalization convention is the only defense we have.</p>
 
-    <p>Global variables should be in all caps. (JavaScript does not have macros or constants, so there isn't much point in using all caps to signify features that JavaScript doesn't have.)</p>
+    <p>Global variables should be in all caps. JavaScript does not have macros or constants<sup>†</sup>, but also use all caps for variables you'd make constant if you could.</p>
+
+    <p><sup>†</sup> ECMAScript 6 (ES6/ES2015) introduces the <code>const</code> keyword, which gets close to the desired behavior of disallowing reassignment or redeclaration, but doesn't cause compile-time errors on reassignment and isn't yet supported across modern browsers.</p>
   </div>
   <div class="col">
     {% highlight js %}{% include js/names.js %}{% endhighlight %}
@@ -245,7 +247,7 @@ layout: default
     <h4>Block scope</h4>
     <p>In JavaScript blocks do not have scope<sup>†</sup>. Only functions have scope. Do not use blocks except as required by the compound statements.</p>
 
-    <p><sup>†</sup> ECMAScript 6 (ES6/ES2015) introduces the <code>let</code> keyword, which is effectively a way to enforce block scope. Even so, as stated above, avoid creating blocks around <code>let</code>, and only use blocks as required by compound statements.</p>
+    <p><sup>†</sup> ES2015 introduces the <code>let</code> keyword, which along with <code>const</code> is block scoped. Even so, as stated above, avoid creating blocks around <code>let</code>, and only use blocks as required by compound statements.</p>
 
     <h4>Assignment expressions</h4>
     <p>Avoid doing assignments in the condition part of <code>if</code> and <code>while</code> statements.</p>
