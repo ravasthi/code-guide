@@ -21,6 +21,7 @@ layout: default
       <li><a href="#html-boolean-attributes">Boolean attributes</a></li>
       <li><a href="#html-reducing-markup">Reducing markup</a></li>
       <li><a href="#html-unnamed-elements">Unnamed non-semantic elements</a></li>
+      <li><a href="#html-automated-testing">Naming and automated testing</a></li>
     </ul>
   </div>
   <div class="col">
@@ -123,14 +124,14 @@ layout: default
     <h3>Attribute order</h3>
     <p>HTML attributes should come in this particular order for easier reading of code.</p>
     <ul>
-      <li><code>class</code></li>
       <li><code>id</code>, <code>name</code></li>
-      <li><code>data-*</code></li>
+      <li><code>class</code></li>
       <li><code>src</code>, <code>for</code>, <code>type</code>, <code>href</code>, <code>value</code></li>
       <li><code>title</code>, <code>alt</code></li>
       <li><code>role</code>, <code>aria-*</code></li>
+      <li><code>data-*</code></li>
     </ul>
-    <p>Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come second.</p>
+    <p>IDs and names should be used sparingly and are intended to be used uniquely, so they come first. Classes denote groups and common behavior/styling, so they come second. Attributes that refer to other entities (<code>src</code>, <code>href</code>, <code>for</code>), further classify the item (<code>type</code>) or provide a value (<code>value</code>) come next. Then come attributes with supplementary information like <code>title</code> and <code>alt</code>. Finally, add the accessibility-related attributes, and any data attributes.</p>
   </div>
   <div class="col">
     {% highlight html %}{% include html/attribute-order.html %}{% endhighlight %}
@@ -180,5 +181,17 @@ layout: default
   </div> <!-- /.col -->
   <div class="col">
     {% highlight html %}{% include html/unnamed-elements.html %}{% endhighlight %}
+  </div> <!-- /.col -->
+</div> <!-- /#html-unnamed-elements -->
+
+<div class="section" id="html-automated-testing">
+  <div class="col">
+    <h3>Naming and automated UI testing</h3>
+    <p>Corollary to the previous section: think about how your markup will be accessed by an automated test. If an element on the page is likely to be accessed by an automated test, make sure to give it a meaningful name.</p>
+    <p>Someone writing a test to verify the correct count for the first code snippet would have to look for <code>h1 strong</code> (assuming use of CSS selectors), which could return more results than expected and throw off testing. It's also brittle and would have to be updated if the markup hierarchy was changed by, say, changing the <code>h1</code> to an <code>h2</code>.</p>
+    <p>By contrast, the selector for the second code snippet would be <code>.result-info .match-count</code>, which is much easier to read and understand, and more flexible in the face of markup hierarchy changes, providing that the two elements were kept in the same ancestor-descendant relationship.</p>
+  </div> <!-- /.col -->
+  <div class="col">
+    {% highlight html %}{% include html/automated-testing.html %}{% endhighlight %}
   </div> <!-- /.col -->
 </div> <!-- /#html-unnamed-elements -->
