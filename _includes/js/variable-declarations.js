@@ -1,7 +1,7 @@
 // Not so good
 var currentEntry, level, size;
 
-// Good
-var currentEntry, // currently selected table entry
-    level,        // indentation level
-    size;         // size of table
+// Good: name your variables meaningfully
+var currentTableEntry,
+    indentationLevel,  // Only add a comment if necessary
+    tableSize;
