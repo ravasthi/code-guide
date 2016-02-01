@@ -22,6 +22,7 @@ layout: default
       <li><a href="#html-reducing-markup">Reducing markup</a></li>
       <li><a href="#html-unnamed-elements">Unnamed non-semantic elements</a></li>
       <li><a href="#html-automated-testing">Naming and automated testing</a></li>
+      <li><a href="#html-inline-styles">Inline styles</a></li>
     </ul>
   </div>
   <div class="col">
@@ -190,8 +191,24 @@ layout: default
     <p>Corollary to the previous section: think about how your markup will be accessed by an automated test. If an element on the page is likely to be accessed by an automated test, make sure to give it a meaningful name.</p>
     <p>Someone writing a test to verify the correct count for the first code snippet would have to look for <code>h1 strong</code> (assuming use of CSS selectors), which could return more results than expected and throw off testing. It's also brittle and would have to be updated if the markup hierarchy was changed by, say, changing the <code>h1</code> to an <code>h2</code>.</p>
     <p>By contrast, the selector for the second code snippet would be <code>.result-info .match-count</code>, which is much easier to read and understand, and more flexible in the face of markup hierarchy changes, providing that the two elements were kept in the same ancestor-descendant relationship.</p>
+    <p>When markup hierarchy changes <em>are</em> made, it is up to the developer doing the changing to:</p>
+    <ul>
+      <li>Run automated tests, including integration tests, to verify that there is no breakage. If there is, it is the developer's responsibility to fix it.</li>
+      <li>If the test suite suffering breakage is owned or maintained by someone else, it is the developer's responsibility to notify the maintainer of the tests that changes have been made to the markup.</li>
+    </ul>
   </div> <!-- /.col -->
   <div class="col">
     {% highlight html %}{% include html/automated-testing.html %}{% endhighlight %}
+  </div> <!-- /.col -->
+</div> <!-- /#html-unnamed-elements -->
+
+<div class="section" id="html-inline-styles">
+  <div class="col">
+    <h3>Inline styles. Just no.</h3>
+    <p>Unless you are writing HTML email, there is <em>no excuse</em> to use inline styles. Put your styles in a stylesheet, where they belong and where they won't cause you to get into a war of specificity with yourself.</p>
+  </div> <!-- /.col -->
+  <div class="col">
+    {% highlight html %}{% include html/inline-styles.html %}{% endhighlight %}
+    {% highlight css %}{% include html/inline-styles.css %}{% endhighlight %}
   </div> <!-- /.col -->
 </div> <!-- /#html-unnamed-elements -->

@@ -259,34 +259,33 @@ h4 {
   margin: 0 0 0.5rem;
   color: #2a2a2a;
   font-weight: normal;
-  letter-spacing: -0.05em;
 }
 
-/* line 62, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 60, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 h1 {
   font-size: 3rem;
   line-height: 1.25em;
 }
 
-/* line 66, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 64, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 h2 {
   font-size: 2.5rem;
   line-height: 1.25em;
 }
 
-/* line 70, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 68, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 h3 {
   font-size: 2rem;
   line-height: 1.25em;
 }
 
-/* line 74, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 72, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 h4 {
   font-size: 1.25rem;
   line-height: 1.25em;
 }
 
-/* line 78, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 76, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 p,
 dl,
 ol,
@@ -294,72 +293,72 @@ ul {
   margin: 0 0 1.5em;
 }
 
-/* line 85, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 83, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 blockquote {
   position: relative;
   margin: 0 1rem 1rem;
   color: #7a7a7a;
   font-style: italic;
 }
-/* line 94, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 92, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 blockquote p {
   margin-bottom: 0;
 }
 
-/* line 99, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 97, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 ul,
 ol {
   margin-bottom: 1.5em;
 }
 
-/* line 104, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 102, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 ul {
   margin-left: 1rem;
   list-style: disc;
 }
 
-/* line 110, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 108, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 ol {
   margin-left: 2rem;
   list-style: decimal;
 }
 
-/* line 116, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 114, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 li {
   margin-bottom: 0.25rem;
 }
 
 /* Tighten up margin on last items */
-/* line 121, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 119, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 p:last-child,
 ul:last-child,
 blockquote:last-child {
   margin-bottom: 0;
 }
 
-/* line 127, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 125, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 sub {
   vertical-align: sub;
 }
 
-/* line 131, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 129, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 sup {
   vertical-align: super;
 }
 
 /*----------[ non-semantic styles ]---------------------------------------------
 */
-/* line 137, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 135, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 .keep-together {
   white-space: nowrap;
 }
 
-/* line 141, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 139, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 .cross-out {
   text-decoration: line-through;
 }
 
-/* line 145, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
+/* line 143, /Users/ravasthi/code/code-guide/_styles/shared/_foundation.scss */
 .indent {
   margin-left: 1rem;
 }

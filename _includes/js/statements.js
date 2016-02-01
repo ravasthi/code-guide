@@ -1,4 +1,12 @@
 // ----- [ if statements ] -----------------------
+// Bad
+if (condition) return false;
+
+// Worse
+if (condition)
+    return false;
+
+// Good: always use braces, even around single statements
 if (condition) {
     // statements
 }
@@ -16,6 +24,29 @@ if (condition) {
 } else {
     // statements
 }
+
+// ----- [ ternary operator ] --------------------
+// Bad
+var firstCheck = false,
+    secondCheck = false,
+    access = firstCheck ? "Access denied" : secondCheck ? "Access denied" : "Access granted";
+
+// You will go to hell for this. What does it even mean?
+var age = 16;
+
+var url = age > 18 ? (
+    alert("OK, you can go."),
+    "continue.html"
+) : (
+    alert("You are much too young!"),
+    alert("Sorry :-("),
+    "stop.html"
+);
+
+location.assign(url);
+
+// Good. Obvious and understandable.
+var fee = isMember ? "$2.00" : "$10.00";
 
 // ----- [ for statements ] ----------------------
 // type 1

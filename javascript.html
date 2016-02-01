@@ -19,6 +19,7 @@ layout: default
       <li><a href="#js-names">Names</a></li>
       <li><a href="#js-statements">Statements</a></li>
       <li><a href="#js-other-conventions">Other conventions</a></li>
+      <li><a href="#js-asynchronous-patterns">Asynchronous patterns</a></li>
     </ul>
   </div>
 </div>
@@ -180,6 +181,9 @@ layout: default
     <h4><code>if</code> statement</h4>
     <p>The <code>if</code> class of statements should have the form shown to the right.</p>
 
+    <h4>The ternary operator <code>?</code></h4>
+    <p>Ternary operators are fine to use as long as what's happening in the code is clear. Keep the statement simple and <strong>never</strong> nest them.</p>
+
     <h4><code>for</code> statement</h4>
     <p>The <code>for</code> class of statements should have the forms shown to the right.</p>
 
@@ -271,5 +275,27 @@ layout: default
   </div>
   <div class="col">
     {% highlight js %}{% include js/other-conventions.js %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="js-asynchronous-patterns">
+  <div class="col">
+    <h3>Asynchronous patterns</h3>
+
+    <h4>Error-first callbacks</h4>
+    <p>When writing Node.js code, take care to define your callbacks in the idiomatic error-first style:</p>
+    <ul>
+      <li>The first argument of the callback is reserved for an error object. If an error occurred, it will be returned by the first <code>err</code> argument.</li>
+      <li>The second argument of the callback is reserved for any successful response data. If no error occurred, <code>err</code> will be set to null and any successful data will be returned in the second argument.</li>
+    </ul>
+
+    <p>Learn more about <a href="http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/" title="The Node.js Way - Understanding Error-First Callbacks">error-first callbacks</a> in Node.js.</p>
+
+    <h4>Managing complicated asynchronous code</h4>
+    <p>When orchestrating several asynchronous operations, consider using a promises library like <a href="https://www.npmjs.com/package/q">Q</a> or abstraction library like <a href="https://www.npmjs.com/package/async">async</a> instead of nesting callbacks inside callbacks inside callbacks etc. They'll make complex asynchronous code easier to read and untangle.</p>
+    <p><a href="https://strongloop.com/strongblog/promises-in-node-js-with-q-an-alternative-to-callbacks/">Read more about promises</a>.</p>
+  </div>
+  <div class="col">
+    {% highlight js %}{% include js/asynchronous-patterns.js %}{% endhighlight %}
   </div>
 </div>
