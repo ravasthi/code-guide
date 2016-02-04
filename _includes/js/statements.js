@@ -1,3 +1,25 @@
+// ----- [ compound statements ] -----------------
+// Bad
+if (condition)
+{
+    // statements
+}
+
+// Good
+if (condition) {
+    // statements
+}
+
+// Okay when if spans multiple lines, to make
+// clear where block begins
+if (condition1 ||
+    condition2 ||
+    condition3)
+{
+    // statements
+}
+
+
 // ----- [ if statements ] -----------------------
 // Bad
 if (condition) return false;

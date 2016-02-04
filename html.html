@@ -41,7 +41,7 @@ layout: default
       <li>Nested elements should be indented once (two spaces).</li>
       <li>Lines should not exceed 100 characters.</li>
       <li>Always use double quotes, never single quotes, on attributes.</li>
-      <li>Don't include a trailing slash in self-closing elements—the <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 spec</a> says they're optional.</li>
+      <li>Don't include a trailing slash in self-closing elements—the <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 spec</a> says they're optional. That is, <em>unless</em> you're writing JSX for React components; JSX <a href="https://facebook.github.io/react/tips/self-closing-tag.html">requires that all tags are closed</a>, either with the trailing slash or with a closing tag.</li>
       <li>Don’t omit optional closing tags (e.g. <code>&lt;/li&gt;</code> or <code>&lt;/body&gt;</code>).</li>
       <li>Attribute values, particularly for the <code>class</code>, <code>id</code> and <code>name</code> attributes, should be in lower <code class="keep-together">spine-case</code>. Not <code>snake_case</code>. Not <code>camelCase</code>. Not, for the love of all that is good, <code class="keep-together">some-unholy_combinationOfThem</code>.</li>
     </ul>
