@@ -2,7 +2,8 @@ guard 'jekyll-plus', serve: true, rack_config: 'config.ru' do
   watch(%r{^.+\.html})
   watch(%r{_includes/.+\.css})
   watch(%r{_includes/.+\.html})
-  # ignore(%r{_site})
+  watch(%r{_includes/.+\.js})
+  ignore(%r{_site})
 end
 
 guard :compass, compile_on_start: true do

@@ -1,0 +1,301 @@
+---
+layout: default
+---
+
+
+<div class="heading" id="toc">
+  <h2>Table of contents</h2>
+</div>
+<div class="section toc">
+  <div class="col">
+    <h4><a href="#javascript-es5">JavaScript (ES5 and below)</a></h4>
+    <ul>
+      <li><a href="#es5-files">JavaScript files</a></li>
+      <li><a href="#es5-syntax">Syntax</a></li>
+      <li><a href="#es5-whitespace">Whitespace</a></li>
+      <li><a href="#es5-comments">Comments</a></li>
+      <li><a href="#es5-variable-declarations">Variable declarations</a></li>
+      <li><a href="#es5-function-declarations">Function declarations</a></li>
+      <li><a href="#es5-names">Names</a></li>
+      <li><a href="#es5-statements">Statements</a></li>
+      <li><a href="#es5-other-conventions">Other conventions</a></li>
+      <li><a href="#es5-asynchronous-patterns">Asynchronous patterns</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="heading" id="javascript-es5">
+  <h2>JavaScript (ES5 and below)</h2>
+</div>
+
+<div class="section" id="es5-files">
+  <div class="col">
+    <h3>JavaScript files</h3>
+    <ul>
+      <li>JavaScript programs should be stored in and delivered as <code>.js</code> files.</li>
+      <li>JavaScript code should not be embedded in HTML unless the code is specific to a single session. Code in HTML adds significantly to page weight with no opportunity for mitigation by caching and compression.</li>
+      <li><code>&lt;script src=&quot;filename.js&quot;&gt;&lt;/script&gt;</code> tags should be placed as late in the body as possible. This reduces the effects of delays imposed by script loading on other page components. There is no need to use the language or type attributes. It is the server, not the script tag, that determines the MIME type.</li>
+    </ul>
+  </div>
+  <div class="col">
+    {% highlight html %}{% include js/script-includes.html %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="es5-syntax">
+  <div class="col">
+    <h3>Syntax</h3>
+    <ul>
+      <li>Use soft tabs with four spaces.</li>
+      <li>Lines should not exceed 100 characters. When a statement will not fit on a single line, it may be necessary to break it. Place the break after an operator, ideally after a comma. A break after an operator decreases the likelihood that a copy-paste error will be masked by semicolon insertion. The next line should be indented at least two tabs (eight spaces).</li>
+      <li>Module and class names should be in <code>UpperCamelCase</code>.</li>
+      <li>Function and variable names should be in <code>lowerCamelCase</code>.</li>
+    </ul>
+  </div>
+  <div class="col">
+    {% highlight js %}{% include js/syntax.js %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="es5-whitespace">
+  <div class="col">
+    <h3>Whitespace</h3>
+    <p>Blank lines improve readability by setting off sections of code that are logically related.</p>
+
+    <p>Blank spaces should be used in the following circumstances:</p>
+
+    <ul>
+      <li>A keyword followed by <code>(</code> (left parenthesis) should be separated by a space.</li>
+      <li>A blank space should not be used between a function value and its <code>(</code> (left parenthesis). This helps to distinguish between keywords and function invocations.</li>
+      <li>All binary operators except <code>.</code> (period) and <code>(</code> (left parenthesis) and <code>[</code> (left bracket) should be separated from their operands by a space.</li>
+      <li>No space should separate a unary operator and its operand except when the operator is a word such as <code>typeof</code>.</li>
+      <li>Each <code>;</code> (semicolon) in the control part of a for statement should be followed with a space.</li>
+      <li>Whitespace should follow every <code>,</code> (comma).</li>
+      <li>Whitespace should follow every <code>:</code> (colon) in an object declaration.</li>
+      <li>Use spaces inside <code>{}</code> (curly braces), but not inside <code>()</code> (parentheses) or <code>[]</code> (square brackets).</li>
+    </ul>
+  </div>
+  <div class="col">
+    {% highlight js %}{% include js/whitespace.js %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="es5-comments">
+  <div class="col">
+    <h3>Comments</h3>
+    <p>Be generous with comments. It is useful to leave information that will be read at a later time by people (possibly yourself) who will need to understand what you have done. The comments should be well-written and clear, just like the code they are annotating. An occasional nugget of humor might be appreciated. Frustrations and resentments will not.</p>
+
+    <p>It is important that comments be kept up-to-date. Erroneous comments can make programs even harder to read and understand.</p>
+
+    <p>Make comments meaningful. Focus on what is not immediately visible. Don't waste the reader's time with the obvious.</p>
+
+    <p>Generally use line comments. Save block comments for formal documentation.</p>
+  </div>
+  <div class="col">
+    {% highlight js %}{% include js/comments.js %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="es5-variable-declarations">
+  <div class="col">
+    <h3>Variable declarations</h3>
+    <p>All variables should be declared before used. JavaScript does not require this, but doing so makes the program easier to read and makes it easier to detect undeclared variables that may become implied <a href="http://yuiblog.com/blog/2006/06/01/global-domination/" title="Global Domination">globals</a>. Implied global variables should never be used. Use of global variables should be minimized.</p>
+
+    <p>The <code>var</code> statement should be the first statement in the function body.</p>
+
+    <p>It is preferred that each variable be given its own line, and comment if necessary—though there is no substitute for using a meaningful name. Value clarity over brevity in variable names. They should be listed in alphabetical order if possible.</p>
+
+    <p>JavaScript does not have block scope, so defining variables in blocks can confuse programmers who are experienced with other C family languages. Define all variables at the top of the function.</p>
+  </div>
+  <div class="col">
+    {% highlight js %}{% include js/variable-declarations.js %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="es5-function-declarations">
+  <div class="col">
+    <h3>Function declarations</h3>
+    <p>All functions should be declared before they are used. Inner functions should follow the <code>var</code> statement. This helps make it clear what variables are included in its scope.</p>
+
+    <p>There should be no space between the name of a function and the <code>(</code> (left parenthesis) of its parameter list. There should be one space between the <code>)</code> (right parenthesis) and the <code>{</code> (left curly brace) that begins the statement body. The body itself is indented four spaces. The <code>}</code> (right curly brace) is aligned with the line containing the beginning of the declaration of the function.</p>
+
+    <p>This convention works well with JavaScript because in JavaScript, functions and object literals can be placed anywhere that an expression is allowed. It provides the best readability with inline functions and complex structures.</p>
+
+    <p>If a function literal is anonymous, there should be one space between the word function and the <code>(</code> (left parenthesis). If the space is omitted, then it can appear that the function's name is <code>function</code>, which is an incorrect reading.</p>
+
+    <p>Use of global functions should be minimized.</p>
+
+    <p>When a function is to be invoked immediately, the entire invocation expression should be wrapped in parens so that it is clear that the value being produced is the result of the function and not the function itself.</p>
+  </div>
+  <div class="col">
+    {% highlight js %}{% include js/function-declarations.js %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="es5-names">
+  <div class="col">
+    <h3>Names</h3>
+    <p>Names should be formed from the 26 upper and lower case letters (<code>A .. Z</code>, <code>a .. z</code>), and the 10 digits (<code>0 .. 9</code>). Avoid use of international characters because they may not read well or be understood everywhere. Though it is legal syntax, do not use <code>_</code> (underbar) in names, instead preferring to put function and variable names in <code>lowerCamelCase</code>. Do not use <code>\</code> (backslash) in names. Only use <code>$</code> (dollar sign) in variable names if you are denoting that the variable contains a jQuery object.</p>
+
+    <p>Do not use <code>_</code> (underbar) as the first or last character of a name. It is sometimes intended to indicate privacy, but it does not actually provide privacy. If privacy is important, use the forms that provide private members. Avoid conventions that demonstrate a lack of competence.</p>
+
+    <p>Most variables and functions should start with a lower case letter.</p>
+
+    <p>Constructor functions that must be used with the <code>new</code> prefix should start with a capital letter. JavaScript issues neither a compile-time warning nor a run-time warning if a required <code>new</code> is omitted. Bad things can happen if <code>new</code> is not used, so the capitalization convention is the only defense we have.</p>
+
+    <p>Global variables should be in all caps. JavaScript does not have macros or constants<sup>†</sup>, but also use all caps for variables you'd make constant if you could.</p>
+
+    <p><sup>†</sup> ECMAScript 6 (ES6/ES2015) introduces the <code>const</code> keyword, which gets close to the desired behavior of disallowing reassignment or redeclaration, but doesn't cause compile-time errors on reassignment and isn't yet supported across modern browsers.</p>
+  </div>
+  <div class="col">
+    {% highlight js %}{% include js/names.js %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="es5-statements">
+  <div class="col">
+    <h3>Statements</h3>
+
+    <h4>Simple statements</h4>
+    <p>Each line should contain at most one statement. Put a <code>;</code> (semicolon) at the end of every simple statement. Note that an assignment statement that is assigning a function literal or object literal is still an assignment statement and must end with a semicolon.</p>
+
+    <p>JavaScript allows any expression to be used as a statement. This can mask some errors, particularly in the presence of semicolon insertion. The only expressions that should be used as statements are assignments and invocations.</p>
+
+    <h4>Compound statements</h4>
+    <p>Compound statements are statements that contain lists of statements enclosed in <code>{ }</code> (curly braces).</p>
+
+    <ul>
+      <li>The enclosed statements should be indented four more spaces.</li>
+      <li>The <code>{</code> (left curly brace) should be at the end of the line that begins the compound statement. <strong>Exception:</strong> if the compound statement belongs to an <code>if</code> statement that spans multiple lines, it is acceptable to move the left curly brace to a new line (see example).</li>
+      <li>The <code>}</code> (right curly brace) should begin a line and be indented to align with the beginning of the line containing the matching <code>{</code> (left curly brace).</li>
+      <li>Braces should be used around all statements, even single statements, when they are part of a control structure, such as an <code>if</code> or <code>for</code> statement. This makes it easier to add statements without accidentally introducing bugs.</li>
+    </ul>
+
+    <h4>Labels</h4>
+    <p>Statement labels are optional. Only these statements should be labeled: <code>while</code>, <code>do</code>, <code>for</code>, <code>switch</code>.</p>
+
+    <h4><code>return</code> statement</h4>
+    <p>A return statement with a value should not use <code>( )</code> (parentheses) around the value. The return value expression must start on the same line as the return keyword in order to avoid semicolon insertion.</p>
+
+    <h4><code>if</code> statement</h4>
+    <p>The <code>if</code> class of statements should have the form shown to the right.</p>
+
+    <h4>The ternary operator <code>?</code></h4>
+    <p>Ternary operators are fine to use as long as what's happening in the code is clear. Keep the statement simple and <strong>never</strong> nest them.</p>
+
+    <h4><code>for</code> statement</h4>
+    <p>The <code>for</code> class of statements should have the forms shown to the right.</p>
+
+    <p>The first form should be used with arrays and with loops of a predeterminable number of iterations.</p>
+
+    <p>The second form should be used with objects. Be aware that members that are added to the prototype of the object will be included in the enumeration. It is wise to program defensively by using the <code>hasOwnProperty</code> method to distinguish the true members of the object.</p>
+
+    <h4><code>while</code> statement</h4>
+    <p>A <code>while</code> statement should have the form shown to the right.</p>
+
+    <h4><code>do</code> statement</h4>
+    <p>A <code>do</code> statement should have the form shown to the right.</p>
+
+    <p>Unlike the other compound statements, the <code>do</code> statement always ends with a <code>;</code> (semicolon).</p>
+
+    <h4><code>switch</code> statement</h4>
+    <p>A <code>switch</code> statement should have the form shown to the right.</p>
+
+    <p>Each <code>case</code> is aligned with the <code>switch</code>. This avoids over-indentation. A <code>case</code> label is not a statement, and should not be indented like one.</p>
+
+    <p>Each group of statements (except the default) should end with <code>break</code>, <code>return</code>, or <code>throw</code>. Do not fall through.</p>
+
+    <h4><code>try</code> statement</h4>
+    <p>A <code>try</code> statement should have the form shown to the right.</p>
+
+    <h4><code>continue</code> statement</h4>
+    <p>Avoid use of the <code>continue</code> statement. It tends to obscure the control flow of the function.</p>
+
+    <h4><code>with</code> statement</h4>
+    <p>The <code>with</code> statement <a href="http://yuiblog.com/blog/2006/04/11/with-statement-considered-harmful/" title="with Statement Considered Harmful">should not be used</a>:</p>
+    <ul>
+      <li>It creates a lexical scope at runtime, which makes your code dangerously unpredictable.</li>
+      <li>Its presence disables optimizations in the JavaScript compiler, which makes your code slower.</li>
+      <li>Also, it's not allowed in strict mode.</li>
+    </ul>
+  </div>
+  <div class="col">
+    {% highlight js %}{% include js/statements.js %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="es5-other-conventions">
+  <div class="col">
+    <h3>Other conventions</h3>
+
+    <h4>Use strict mode</h4>
+    <p>Always use strict mode. It disables such undesirable features as implicit global variable declaration and in general makes your code behave more predictably.</p>
+
+    <h4>Named function expressions</h4>
+    <p>Always use named function expressions:</p>
+
+    <ul>
+      <li>You'll get a reliable self-reference, and</li>
+      <li>They make your stack traces much easier to decipher.</li>
+    </ul>
+
+    <h4><code>{}</code> and <code>[]</code></h4>
+    <p>Use <code>{}</code> instead of <code>new Object()</code>. Use <code>[]</code> instead of <code>new Array()</code>.</p>
+
+    <p>Use arrays when the member names would be sequential integers. Use objects when the member names are arbitrary strings or names.</p>
+
+    <h4><code>,</code> (comma) Operator</h4>
+    <p>Avoid the use of the comma operator. (This does not apply to the comma <em>separator</em>, which is used in object literals, array literals, <code>var</code> statements, and parameter lists.)</p>
+
+    <h4>Block scope</h4>
+    <p>In JavaScript blocks do not have scope<sup>†</sup>. Only functions have scope. Do not use blocks except as required by the compound statements.</p>
+
+    <p><sup>†</sup> ES2015 introduces the <code>let</code> keyword, which along with <code>const</code> is block scoped. Even so, as stated above, avoid creating blocks around <code>let</code>, and only use blocks as required by compound statements.</p>
+
+    <h4>Assignment expressions</h4>
+    <p>Avoid doing assignments in the condition part of <code>if</code> and <code>while</code> statements.</p>
+
+    <p>Is assignment or comparison intended? Avoid constructs that cannot easily be determined to be correct.</p>
+
+    <h4><code>===</code> and <code>!==</code> operators</h4>
+    <p>Use the <code>===</code> and <code>!==</code> operators. The <code>==</code> and <code>!=</code> operators do type coercion and should not be used.</p>
+
+    <h4>Confusing pluses and minuses</h4>
+    <p>Be careful to not follow a <code>+</code> with <code>+</code> or <code>++</code>. This pattern can be confusing. Insert parens between them to make your intention clear.</p>
+
+    <h4><code>eval</code> is evil</h4>
+    <p>The <code>eval</code> function is the most misused feature of JavaScript. Avoid it. Similar to the <code>with</code> statement:</p>
+    <ul>
+      <li>It dynamically modifies lexical scope at runtime.</li>
+      <li>Its presence disables optimizations in the JavaScript compiler.</li>
+      <li>Strict mode prevents <code>eval</code> from modifying lexical scope.</li>
+    </ul>
+    <p><code>eval</code> has aliases. Do not use the <code>Function</code> constructor. Do not pass strings to <code>setTimeout</code> or <code>setInterval</code>.</p>
+  </div>
+  <div class="col">
+    {% highlight js %}{% include js/other-conventions.js %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="es5-asynchronous-patterns">
+  <div class="col">
+    <h3>Asynchronous patterns</h3>
+
+    <h4>Error-first callbacks</h4>
+    <p>When writing Node.js code, take care to define your callbacks in the idiomatic error-first style:</p>
+    <ul>
+      <li>The first argument of the callback is reserved for an error object. If an error occurred, it will be returned by the first <code>err</code> argument.</li>
+      <li>The second argument of the callback is reserved for any successful response data. If no error occurred, <code>err</code> will be set to null and any successful data will be returned in the second argument.</li>
+    </ul>
+
+    <p>Learn more about <a href="http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/" title="The Node.js Way - Understanding Error-First Callbacks">error-first callbacks</a> in Node.js.</p>
+
+    <h4>Managing complicated asynchronous code</h4>
+    <p>When orchestrating several asynchronous operations, consider using a promises library like <a href="https://www.npmjs.com/package/q">Q</a> or abstraction library like <a href="https://www.npmjs.com/package/async">async</a> instead of nesting callbacks inside callbacks inside callbacks etc. They'll make complex asynchronous code easier to read and untangle.</p>
+    <p><a href="https://strongloop.com/strongblog/promises-in-node-js-with-q-an-alternative-to-callbacks/">Read more about promises</a>.</p>
+  </div>
+  <div class="col">
+    {% highlight js %}{% include js/asynchronous-patterns.js %}{% endhighlight %}
+  </div>
+</div>
