@@ -3,26 +3,18 @@ layout: default
 ---
 
 
-<!-- <div class="heading" id="toc">
+<div class="heading" id="toc">
   <h2>Table of contents</h2>
 </div>
 <div class="section toc">
   <div class="col">
-    <h4><a href="#javascript">JavaScript</a></h4>
+    <h4><a href="#javascript">JavaScript (ES2015+)</a></h4>
     <ul>
-      <li><a href="#js-files">JavaScript files</a></li>
-      <li><a href="#js-syntax">Syntax</a></li>
-      <li><a href="#js-whitespace">Whitespace</a></li>
-      <li><a href="#js-comments">Comments</a></li>
-      <li><a href="#js-variable-declarations">Variable declarations</a></li>
-      <li><a href="#js-function-declarations">Function declarations</a></li>
-      <li><a href="#js-names">Names</a></li>
-      <li><a href="#js-statements">Statements</a></li>
-      <li><a href="#js-other-conventions">Other conventions</a></li>
-      <li><a href="#js-asynchronous-patterns">Asynchronous patterns</a></li>
+      <li><a href="#js-main">AirBnB JS Standards FTW</a></li>
+      <li><a href="#js-file-naming">File naming conventions</a></li>
     </ul>
   </div>
-</div> -->
+</div>
 
 
 <div class="heading" id="javascript">
@@ -31,7 +23,25 @@ layout: default
 
 <div class="section" id="js-main">
   <div class="col">
+    <h3>AirBnB JS Standards FTW</h3>
     <p>We've adopted <a href="https://github.com/airbnb/javascript">AirBnB's JavaScript style guide</a> wholesale, except where it directly contradicts our <a href="{{ base }}/javascript">existing ES5 standards</a>. In those cases, our standards supercede.</p>
+  </div>
+  <!-- <div class="col">
+    {% highlight html %}{% include js/script-includes.html %}{% endhighlight %}
+  </div> -->
+</div>
+
+<div class="section" id="js-file-naming">
+  <div class="col">
+    <h3>File naming conventions</h3>
+    <p>A few guidelines on how to name your files for consistency:</p>
+    <ul>
+      <li>If the file contains a class or module that is exported, it should be named the same as the module. So the file exporting the class <code>Account</code> should be called <code>Account.js</code>.</li>
+
+      <li>If the file has no classes/modules or is a collection of utilities, it should use a camel-case name starting with a lower-case letter, e.g. <code>numberFormatUtils.js</code> or <code>chartSettingsDefaults.js</code>.</li>
+
+      <li>All folder names should be lower-spine case, e.g. <code>data/models/user-preferences/UserPreference.js</code>.</li>
+    </ul>
   </div>
   <!-- <div class="col">
     {% highlight html %}{% include js/script-includes.html %}{% endhighlight %}
