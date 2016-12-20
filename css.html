@@ -14,6 +14,7 @@ layout: default
       <li><a href="#css-comments">Comments</a></li>
       <li><a href="#css-identifiers">Class and ID names</a></li>
       <li><a href="#css-declaration-order">Declaration order</a></li>
+      <li><a href="#css-white-space">White space</a></li>
       <li><a href="#css-import">Don't use <code>@import</code></a></li>
       <li><a href="#css-important"><code>!important</code></a></li>
       <li><a href="#css-media-queries">Media query placement</a></li>
@@ -108,6 +109,21 @@ layout: default
   </div>
   <div class="col">
     {% highlight css %}{% include css/declaration-order.css %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="css-white-space">
+  <div class="col">
+    <h3>White space</h3>
+    <p>Use white space (newlines) to enhance readability:</p>
+    <ol>
+      <li>Between groups of property declarations as described in <a href="#css-declaration-order"><em>Declaration order</em></a></li>
+      <li>Between a property declaration and a nested ruleset</li>
+      <li>Between consecutive rulesets</li>
+    </ol>
+  </div>
+  <div class="col">
+    {% highlight scss %}{% include css/white-space.scss %}{% endhighlight %}
   </div>
 </div>
 
