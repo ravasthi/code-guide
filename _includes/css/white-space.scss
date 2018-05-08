@@ -1,0 +1,36 @@
+/* Bad */
+.dont-do-this {
+  margin: 0;
+  border: 1px solid #e5e5e5;
+  .nested-block-01 {
+    float: left;
+  }
+  .nested-block-02 {
+    float: right;
+    margin-left: 2em;
+    text-align: right;
+  }
+}
+
+/* Good */
+.this-is-better {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+
+  .nested-block-01 {
+    text-align: right;
+    font-weight: bold;
+  }
+
+  .nested-block-02 {
+    font-size: 2em;
+    line-height: 1.2;
+    font-style: italic;
+  }
+}
