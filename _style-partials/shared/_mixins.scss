@@ -6,12 +6,12 @@
 |
 |   @mixin content-inner-border
 |   {
-|     @include border-radius(5px);
+|     border-radius: 5px;
 |   }
 |
 |   @mixin content-shadow
 |   {
-|     @include single-box-shadow($silver-sand, 0, 3px, 5px);
+|     box-shadow: 0 3px 5px $silver-sand;
 |   }
 |
 |   @mixin content-inner-box
@@ -188,7 +188,7 @@
 
   @include retina {
     background-image: image-url($retina-image-name);
-    @include background-size($image-width $image-height);
+    background-size: $image-width $image-height;
   }
 }
 

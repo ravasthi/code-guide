@@ -1,17 +1,4 @@
 source 'https://rubygems.org'
 
-# Test that shit locally
+# Test it locally
 gem 'github-pages'
-
-# Moar better CSS
-gem 'jekyll-compass'
-gem 'guard-compass'
-
-# Guard, Pow and Livereload
-gem 'guard'
-gem 'guard-jekyll-plus'
-gem 'guard-livereload'
-gem 'guard-pow'
-gem 'rack-jekyll'
-gem 'powder'
-gem 'thin'
