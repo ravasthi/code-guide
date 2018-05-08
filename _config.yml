@@ -8,5 +8,6 @@ highlighter:   rouge
 
 exclude:       ['config.ru', 'Gemfile', 'Gemfile.lock', 'Guardfile', 'LICENSE.md', 'README.md']
 
-# baseurl:       http://code-guide.dev
-# host:          code-guide.dev
+sass:
+    load_paths:
+      _style-partials

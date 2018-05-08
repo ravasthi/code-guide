@@ -103,8 +103,8 @@ layout: default
     </ol>
     <p>Layout and positioning come first because they can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.</p>
     <p>Everything else takes place <em>inside</em> the component or without impacting the previous two sections, and thus they come last.</p>
-    <p>For a complete list of properties and their order, please see <a href="https://github.com/ravasthi/dotfiles/blob/master/csscomb.json">my CSScomb<sup>†</sup> config</a>.</p>
-    <p><sup>†</sup> <a href="http://csscomb.com" title="CSScomb: Makes your code beautiful">CSScomb</a> is a coding style formatter for CSS.</p>
+    <p>For a complete list of properties and their order, please see <a href="https://github.com/ravasthi/css3-foundation/blob/master/stylelint.config.js#L36">my stylelint-order<sup>†</sup> config</a>.</p>
+    <p><sup>†</sup> <a href="https://www.npmjs.com/package/stylelint-order">stylelint-order</a> is a plugin to the popular style linter <a href="https://stylelint.io">stylelint</a>, that enables you to check the order of your style declarations.</p>
   </div>
   <div class="col">
     {% highlight css %}{% include css/declaration-order.css %}{% endhighlight %}
